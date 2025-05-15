@@ -1,0 +1,1715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneFit Clothing - Mocha Cozy Hoodie</title>
+    <link rel="shortcut icon" href="OneFit Clothing.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        /* Custom font for logo */
+        @font-face {
+            font-family: 'Pogonia';
+            src: url('https://fonts.cdnfonts.com/css/pogonia') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #F9E4DA;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            padding: 10px 50px;
+        }
+
+        .logo {
+            font-family: 'Pogonia', cursive;
+            font-size: 32px;
+            color: #1D503A;
+            text-decoration: none;
+            margin-right: 40px;
+            font-weight: bold;
+        }
+
+        .search-container {
+            position: relative;
+            width: 300px;
+            margin-right: 40px;
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 10px 15px;
+            border-radius: 25px;
+            border: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+        }
+
+        .search-container button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #1D503A;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-grow: 1;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #1D503A;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #1D503A;
+            transition: width 0.3s ease;
+        }
+
+        .links a:hover::after {
+            width: 100%;
+        }
+
+        .icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .icon {
+            position: relative;
+            color: #1D503A;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #1D503A;
+            color: white;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            font-size: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /*product main*/
+    
+    .product-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin: 50px 0;
+    }
+    
+    .product-gallery {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .main-image {
+      width: 100%;
+      height: 500px;
+      background-color: #f0f0f0;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    .main-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .thumbnail-container {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .thumbnail {
+      width: 80px;
+      height: 80px;
+      background-color: #f0f0f0;
+      cursor: pointer;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .product-info {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .product-title {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    
+    .product-price {
+      font-size: 24px;
+      font-weight: bold;
+      color: #e63946;
+      margin-bottom: 20px;
+    }
+    
+    .product-rating {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .stars {
+      color: #ffc107;
+    }
+    
+    .product-description {
+      margin-bottom: 30px;
+    }
+    
+    .options-container {
+      margin-bottom: 30px;
+    }
+    
+    .option-label {
+      font-weight: bold;
+      margin-bottom: 10px;
+      display: block;
+    }
+    
+    .size-options {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+    
+    .size-option {
+      border: 1px solid #ccc;
+      padding: 8px 15px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .size-option.active {
+      background-color: #333;
+      color: white;
+    }
+    
+    .quantity-selector {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+    
+    .quantity-btn {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f0f0f0;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .quantity-input {
+      width: 50px;
+      height: 30px;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+    
+    .add-to-cart {
+      background-color: #e63946;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+    
+    .add-to-cart:hover {
+      background-color: #1D503A;
+    }
+    
+    .product-features {
+      margin-top: 50px;
+    }
+    
+    .features-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    
+    .feature-card {
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+    }
+    
+    .feature-icon {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #e63946;
+    }
+    
+    .reviews-section {
+      margin: 70px 0;
+    }
+    
+    .reviews-title {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    
+    .review-card {
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    
+    .reviewer-name {
+      font-weight: bold;
+    }
+    
+    .similar-products {
+      margin: 70px 0;
+    }
+    
+    .similar-title {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    
+    .product-card {
+      border: 1px solid #eee;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+    
+    .product-card:hover {
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .product-card-image {
+      height: 200px;
+      background-color: #f0f0f0;
+      overflow: hidden;
+    }
+
+    .product-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .product-card-info {
+      padding: 15px;
+    }
+    
+    .product-card-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .product-card-price {
+      color: #e63946;
+      font-weight: bold;
+    }
+
+    /*you may also like view product button*/
+    .btn {
+        display: inline-block;
+        background-color: white;
+        color: #1D503A;
+        padding: 0.8rem 1.5rem;
+        border-radius: 2rem;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s;         
+    }
+        
+    .btn:hover {
+        background-color: #f8f9fa;
+        transform: translateY(-2px);
+    }
+
+        /* Newsletter */
+        .newsletter {
+            background-color: #F9E4DA;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .newsletter-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #1D503A;
+        }
+
+        .newsletter-text {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: #555;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-input {
+            flex-grow: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 30px 0 0 30px;
+            font-size: 16px;
+        }
+
+        .newsletter-btn {
+            padding: 0 30px;
+            background-color: #1D503A;
+            color: white;
+            border: none;
+            border-radius: 0 30px 30px 0;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-btn:hover {
+            background-color: #143726;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #1D503A;
+            color: white;
+            padding: 80px 0 20px;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-column {
+            width: 250px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            font-family: 'Pogonia', cursive;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .footer-text {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .footer-column h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .footer-column h4::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: white;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #CCC;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: white;
+            color: #1D503A;
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 20px;
+            font-size: 14px;
+            color: #CCC;
+        }
+
+        /* Q&A Accordion */
+        .faq {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .accordion {
+            margin-bottom: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            background-color: #F4F4F4;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .accordion-content {
+            background-color: white;
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-content.active {
+            padding: 20px;
+            max-height: 200px;
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #1D503A;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .scroll-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            background-color: #143726;
+            transform: translateY(-5px);
+        }
+
+        /* Pop-up Sale Notification */
+        .popup {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            transform: translateY(150%);
+            transition: all 0.5s ease;
+        }
+
+        .popup.show {
+            transform: translateY(0);
+        }
+
+        .popup-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+
+        .popup-content h3 {
+            margin-bottom: 5px;
+            color: #1D503A;
+        }
+
+        .popup-content p {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .popup-btn {
+            padding: 5px 15px;
+            background-color: #1D503A;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .popup-btn:hover {
+            background-color: #143726;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes shine {
+            0% {
+                left: -100px;
+            }
+            20% {
+                left: 100%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+    </style>
+</head>
+
+<ht>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">OneFit Clothing</a>
+        <div class="search-container">
+            <input type="text" placeholder="Search products...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="nav-links">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="tshirts.html">T-Shirts</a>
+                <a href="hoodies.html">Hoodies</a>
+                <a href="login.html">Login</a>
+            </div>
+            <div class="icons">
+                <a href="cart.html" class="icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="badge">2</span>
+                </a>
+                <a href="myaccount.html" class="icon">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </nav><br>
+
+<body>
+    <main class="container">
+        <div class="product-section">
+          <div class="product-gallery">
+            <div class="main-image">
+              <img src="Mocha Cozy Hoodie 03.png" alt="Mocha Cozy Hoodie" >
+            </div>
+            <div class="thumbnail-container">
+              <div class="thumbnail">
+                <img src="Mocha Cozy Hoodie 01.png" alt="Thumbnail 1" >
+              </div>
+              <div class="thumbnail">
+                <img src="Mocha Cozy Hoodie 02.png" alt="Thumbnail 2" >
+              </div>
+            </div>
+          </div>
+          
+          <div class="product-info">
+            <h1 class="product-title">Mocha Cozy Hoodie</h1>
+            <div class="product-price">RS: 2550.00</div>
+            
+            <div class="product-rating">
+              <div class="stars">★★★★☆</div>
+              <span>(120 reviews)</span>
+            </div>
+            
+            <div class="product-description">
+              <p>Wrap yourself in comfort with the Mocha Cozy Hoodie — the ultimate blend of warmth, softness, and effortless style. With its neutral mocha tone, relaxed fit, and buttery-soft fabric, this hoodie is your go-to layer for chilly mornings, coffee runs, and cozy nights in.</p>
+            </div>
+            
+            <div class="options-container">
+              <label class="option-label">Size</label>
+              <div class="size-options">
+                <div class="size-option" onclick="selectSize(this)">S</div>
+                <div class="size-option active" onclick="selectSize(this)">M</div>
+                <div class="size-option" onclick="selectSize(this)">L</div>
+                <div class="size-option" onclick="selectSize(this)">XL</div>
+                <div class="size-option" onclick="selectSize(this)">XXL</div>
+              </div>
+              
+              <div class="quantity-selector">
+                <label class="option-label">Quantity</label>
+                <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                <input type="text" class="quantity-input" id="quantity" value="1">
+                <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+              </div>
+              
+              <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="product-features">
+          <h2 class="features-title">Product Features</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">☁️</div>
+              <h3>Ultra-Soft Interior</h3>
+              <p>Brushed fleece lining on the inside feels like a hug — keeping you warm without overheating.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🧥</div>
+              <h3>Relaxed Drop Shoulder Fit</h3>
+              <p>The oversized cut with dropped shoulders adds a modern streetwear vibe and all-day ease.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🎨</div>
+              <h3>Neutral Mocha Tone</h3>
+              <p>Versatile, earthy color that pairs perfectly with leggings, jeans, or joggers — elevate your basics.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🧼</div>
+              <h3>Easy to Care</h3>
+              <p>Machine-washable fabric that retains softness and structure even after multiple wears and washes.</p>
+            </div>
+          </div>
+        </div><br>
+        
+        <div class="product-details">
+          <h2 class="details-title">Product Specifications</h2>
+          <ul>
+            <li><strong>Material:</strong> 80% Cotton, 20% Polyester (Fleece Lined)</li>
+            <li><strong>Color:</strong> Warm Mocha Brown</li>
+            <li><strong>Fit:</strong> Oversized with drop shoulders</li>
+            <li><strong>Care:</strong> Cold machine wash, hang dry for best results</li>
+            <li><strong>Pockets:</strong> Front kangaroo pocket</li>
+            <li><strong>Origin:</strong> Ethically made in India</li>
+          </ul>
+        </div>
+        
+        <div class="reviews-section">
+          <h2 class="reviews-title">Customer Reviews</h2>
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer-name">Sneha T.</div>
+              <div class="stars">★★★★★</div>
+            </div>
+            <p>This hoodie is seriously soft! I’ve been wearing it nonstop since it arrived. The mocha shade is so flattering and looks good with everything.</p>
+          </div>
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer-name">Sarah K.</div>
+              <div class="stars">★★★★★</div>
+            </div>
+            <p>Exactly what I wanted in a cozy hoodie. Super warm but still lightweight. The oversized fit is perfect for layering too.</p>
+          </div>
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer-name">James L.</div>
+              <div class="stars">★★★★☆</div>
+            </div>
+            <p>I love everything about it, especially the color and feel. Gave 4 stars only because I wish the sleeves were just a little longer.</p>
+          </div>
+        </div>
+        
+        <div class="similar-products">
+          <h2 class="similar-title">You May Also Like</h2>
+          <div class="product-grid">
+            <div class="product-card">
+              <div class="product-card-image">
+                <img src="Gray Marl Cropped Hoodie.png" alt="Gray Marl Cropped Hoodie" />
+              </div>
+              <div class="product-card-info">
+                <div class="product-card-title">Gray Marl Cropped Hoodie</div><br><br>
+                <div class="product-card-price">RS: 3350.00</div>
+              </div>
+              <a href="hoodie4.html" class="btn">View Product</a>
+            </div>
+            <div class="product-card">
+              <div class="product-card-image">
+                <img src="Brown Based Tiny Polkadot Printed Hoodie 02.png" alt="Brown Based Tiny Polkadot Printed Hoodie" />
+              </div>
+              <div class="product-card-info">
+                <div class="product-card-title">Brown Based Tiny Polkadot Printed Hoodie</div><br>
+                <div class="product-card-price">RS: 2000.00</div>
+              </div>
+              <a href="hoodie3.html" class="btn">View Product</a>
+            </div>
+            <div class="product-card">
+              <div class="product-card-image">
+                <img src="Happiness Navy Blue T Shirt 01.png" alt="Happiness Navy Blue T Shirt" />
+              </div>
+              <div class="product-card-info">
+                <div class="product-card-title">Happiness Navy Blue T Shirt</div><br><br>
+                <div class="product-card-price">RS: 1200.00</div>
+              </div>
+              <a href="shirt2.html" class="btn">View Product</a>
+            </div>
+            <div class="product-card">
+              <div class="product-card-image">
+                <img src="Drop-Shoulder Mid-Sleeve T-Shirt (1).png" alt="Drop-Shoulder Mid-Sleeve T-Shirt" />
+              </div>
+              <div class="product-card-info">
+                <div class="product-card-title">Drop-Shoulder Mid-Sleeve T-Shirt</div><br>
+                <div class="product-card-price">RS: 2500.00</div>
+              </div>
+              <a href="shirt5.html" class="btn">View Product</a>
+            </div>
+          </div>
+        </div>
+      </main>
+
+    <!-- Footer Section -->
+<footer class="footer">
+    <!-- Footer Top - Newsletter -->
+    <div class="footer-top">
+        <div class="container">
+            <div class="newsletter-wrapper">
+                <div class="newsletter-content">
+                    <h3>Be the first to get Updates & Offers!</h3>
+                    <p>Subscribe to our newsletter and get 10% off your first purchase</p>
+                </div>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer Main -->
+    <div class="footer-main">
+        <div class="container">
+            <div class="footer-columns">
+                <!-- About Company -->
+                <div class="footer-column">
+                    <div class="footer-logo">OneFit Clothing</div>
+                    <p class="footer-text">Elevate your wardrobe with our premium collection of printed t-shirts and hoodies designed exclusively for modern women.</p>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Fashion Street, Colombo 07, Sri Lanka</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+94 11 222 3333</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>support@onefitclothing.com</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Pinterest">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Orders -->
+                <div class="footer-column">
+                    <h4>Orders</h4>
+                    <ul>
+                        <li><a href="index.html">Search</a></li>
+                        <li><a href="tshirts.html">T shirts</a></li>
+                        <li><a href="hoodies.html">Hoodies</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="size.html">Size Guide</a></li>
+                        <li><a href="login.html">Log in</a></li>
+                    </ul>
+                </div>
+                
+                <!-- FAQs -->
+                <div class="footer-column">
+                    <h4>FAQs</h4>
+                    <div class="footer-accordion">
+                        <div class="footer-faq-item">
+                            <div class="footer-faq-question">
+                                <span>Shipping Information</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="footer-faq-answer">
+                                <p>We offer free shipping on all orders over RS: 5000.00. Standard delivery takes 3-5 business days.</p>
+                            </div>
+                        </div>
+                        <div class="footer-faq-item">
+                            <div class="footer-faq-question">
+                                <span>Return Policy</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="footer-faq-answer">
+                                <p>We accept returns within 30 days of purchase. Items must be unused with original tags.</p>
+                            </div>
+                        </div>
+                        <div class="footer-faq-item">
+                            <div class="footer-faq-question">
+                                <span>Size Guide</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="footer-faq-answer">
+                                <p>Please refer to our size chart on each product page for accurate measurements.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer Middle - Payment Methods & App Downloads -->
+    <div class="footer-middle">
+        <div class="container">
+            <div class="footer-middle-content">
+                <div class="payment-methods">
+                    <h5>Payment Methods</h5>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fab fa-cc-apple-pay"></i>
+                    </div>
+                </div>
+                <div class="app-download">
+                    <h5>Download Our App</h5>
+                    <div class="app-buttons">
+                        <a href="#" class="app-button">
+                            <i class="fab fa-apple"></i>
+                            <span>
+                                <small>Download on the</small>
+                                <strong>App Store</strong>
+                            </span>
+                        </a>
+                        <a href="#" class="app-button">
+                            <i class="fab fa-google-play"></i>
+                            <span>
+                                <small>GET IT ON</small>
+                                <strong>Google Play</strong>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer Bottom - Copyright & Secondary Links -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom-content">
+                <div class="copyright">
+                    <p>&copy; 2025 OneFit Clothing. All Rights Reserved.</p>
+                </div>
+                <div class="back-to-top" id="backToTop">
+                    <span>Back to top</span>
+                    <i class="fas fa-chevron-up"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- CSS for Advanced Footer -->
+<style>
+/* Footer Styles */
+.footer {
+    background-color: #1D503A;
+    color: white;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.footer::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Footer Top - Newsletter */
+.footer-top {
+    background-color: #143726;
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-top::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 50%;
+}
+
+.footer-top::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    right: -80px;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 50%;
+}
+
+.newsletter-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.newsletter-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.newsletter-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.newsletter-content p {
+    color: #ccc;
+}
+
+.newsletter-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.form-group {
+    display: flex;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.form-group input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+.form-group button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #F9E4DA 0%, #F9C6A7 100%);
+    color: #1D503A;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-group button:hover {
+    background: linear-gradient(135deg, #F9C6A7 0%, #F9E4DA 100%);
+    transform: translateY(-2px);
+}
+
+/* Footer Main */
+.footer-main {
+    padding: 70px 0 50px;
+    position: relative;
+}
+
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-logo {
+    font-family: 'Pogonia', 'Poppins', cursive; /* fallback added */
+    font-size: 28px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #ffffff, #F9E4DA);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.footer-text {
+    line-height: 1.6;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.footer-contact {
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.contact-item i {
+    color: #F9E4DA;
+    margin-right: 10px;
+    margin-top: 4px;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #F9E4DA 0%, #F9C6A7 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.social-icon:hover {
+    color: #1D503A;
+    transform: translateY(-5px);
+}
+
+.social-icon:hover::before {
+    opacity: 1;
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-column h4::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #F9E4DA, transparent);
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.footer-column ul li::before {
+    content: '›';
+    position: absolute;
+    left: -15px;
+    color: #F9E4DA;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.footer-column ul li:hover {
+    padding-left: 20px;
+}
+
+.footer-column ul li:hover::before {
+    opacity: 1;
+    left: 0;
+}
+
+.footer-column ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #F9E4DA;
+}
+
+/* Footer FAQ Accordion */
+.footer-accordion {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.footer-faq-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-faq-item:last-child {
+    border-bottom: none;
+}
+
+.footer-faq-question {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.footer-faq-question:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-faq-question i {
+    transition: transform 0.3s ease;
+}
+
+.footer-faq-item.active .footer-faq-question i {
+    transform: rotate(180deg);
+}
+
+.footer-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 15px;
+}
+
+.footer-faq-item.active .footer-faq-answer {
+    max-height: 100px;
+    padding: 0 15px 15px;
+}
+
+.footer-faq-answer p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Footer Middle - Payment Methods & App Downloads */
+.footer-middle {
+    padding: 40px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-middle-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.payment-methods, .app-download {
+    flex: 1;
+    min-width: 300px;
+}
+
+.payment-methods h5, .app-download h5 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #F9E4DA;
+}
+
+.payment-icons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.payment-icons i {
+    font-size: 30px;
+    color: #ddd;
+    transition: all 0.3s ease;
+}
+
+.payment-icons i:hover {
+    color: white;
+    transform: translateY(-3px);
+}
+
+.app-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.app-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.app-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.app-button i {
+    font-size: 24px;
+}
+
+.app-button span {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-button small {
+    font-size: 10px;
+    opacity: 0.8;
+}
+
+.app-button strong {
+    font-size: 14px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    padding: 25px 0;
+    font-size: 14px;
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.copyright p {
+    color: #aaa;
+}
+
+.secondary-links {
+    display: flex;
+    gap: 20px;
+}
+
+.secondary-links a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.secondary-links a:hover {
+    color: #F9E4DA;
+}
+
+.back-to-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+    color: #F9E4DA;
+    transform: translateY(-3px);
+}
+
+.back-to-top i {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.back-to-top:hover i {
+    background-color: #F9E4DA;
+    color: #1D503A;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .newsletter-wrapper,
+    .footer-columns,
+    .footer-middle-content,
+    .footer-bottom-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-column,
+    .payment-methods,
+    .app-download {
+        width: 100%;
+        min-width: unset;
+    }
+    
+    .copyright,
+    .secondary-links,
+    .back-to-top {
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+/* Animation for Footer Elements */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer-column {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.footer-column:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.footer-column:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.footer-column:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+/* Footer pulse animation for CTA elements */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(249, 228, 218, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(249, 228, 218, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(249, 228, 218, 0);
+    }
+}
+
+.form-group button {
+    animation: pulse 2s infinite;
+}
+</style>
+
+</body>
+</html>
+
+<!-- JavaScript for Footer Functionality -->
+<script>
+    // Interactive FAQ accordion in footer
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.footer-faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.footer-faq-question');
+            
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all items
+                faqItems.forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                });
+                
+                // If clicked item wasn't active before, open it
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // Back to top functionality
+        const backToTop = document.getElementById('backToTop');
+        if (backToTop) {
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+    });
+</script>
+
+<script>
+    // Size selection functionality
+    function selectSize(element) {
+      // Remove active class from all size options
+      const sizeOptions = document.querySelectorAll('.size-option');
+      sizeOptions.forEach(option => {
+        option.classList.remove('active');
+      });
+      
+      // Add active class to the clicked element
+      element.classList.add('active');
+      
+      // You could also store the selected size in a variable if needed
+      const selectedSize = element.textContent;
+      console.log('Selected size:', selectedSize);
+    }
+    
+    // Quantity functionality
+    function increaseQuantity() {
+      const quantityInput = document.getElementById('quantity');
+      const currentQuantity = parseInt(quantityInput.value);
+      quantityInput.value = currentQuantity + 1;
+    }
+    
+    function decreaseQuantity() {
+      const quantityInput = document.getElementById('quantity');
+      const currentQuantity = parseInt(quantityInput.value);
+      if (currentQuantity > 1) {
+        quantityInput.value = currentQuantity - 1;
+      }
+    }
+    
+    // Add to cart functionality
+    function addToCart() {
+      const selectedSize = document.querySelector('.size-option.active').textContent;
+      const quantity = document.getElementById('quantity').value;
+      
+      alert(`Added to cart: ${quantity} Mocha Cozy Hoodie(s) in size ${selectedSize}`);
+      // In a real implementation, you would send this data to a backend or add to a cart object
+    }
+  </script>

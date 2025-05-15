@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneFit Clothing - Hoodies</title>
+    <link rel="shortcut icon" href="OneFit Clothing.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        /* Custom font for logo */
+        @font-face {
+            font-family: 'Pogonia';
+            src: url('https://fonts.cdnfonts.com/css/pogonia') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #F9E4DA;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            padding: 10px 50px;
+        }
+
+        .logo {
+            font-family: 'Pogonia', cursive;
+            font-size: 32px;
+            color: #1D503A;
+            text-decoration: none;
+            margin-right: 40px;
+            font-weight: bold;
+        }
+
+        .search-container {
+            position: relative;
+            width: 300px;
+            margin-right: 40px;
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 10px 15px;
+            border-radius: 25px;
+            border: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+        }
+
+        .search-container button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #1D503A;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-grow: 1;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #1D503A;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #1D503A;
+            transition: width 0.3s ease;
+        }
+
+        .links a:hover::after {
+            width: 100%;
+        }
+
+        .icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .icon {
+            position: relative;
+            color: #1D503A;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #1D503A;
+            color: white;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            font-size: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /*terms*/
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .tos-content {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            margin-top: 40px;
+        }
+        
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            margin-top: 30px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .last-updated {
+            font-style: italic;
+            margin-top: 40px;
+            color: #777;
+        }
+        
+        .back-to-top {
+            background-color: #1D503A;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: none;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .tos-navigation {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .tos-navigation h3 {
+            margin-bottom: 15px;
+        }
+        
+        .tos-navigation ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .tos-navigation ul li {
+            margin-bottom: 8px;
+        }
+        
+        .tos-navigation ul li a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .tos-navigation ul li a:hover {
+            text-decoration: underline;
+        }
+        
+        .highlight-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #1D503A;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+
+        /* Newsletter */
+        .newsletter {
+            background-color: #F9E4DA;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .newsletter-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #1D503A;
+        }
+
+        .newsletter-text {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: #555;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-input {
+            flex-grow: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 30px 0 0 30px;
+            font-size: 16px;
+        }
+
+        .newsletter-btn {
+            padding: 0 30px;
+            background-color: #1D503A;
+            color: white;
+            border: none;
+            border-radius: 0 30px 30px 0;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-btn:hover {
+            background-color: #143726;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #1D503A;
+            color: white;
+            padding: 80px 0 20px;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-column {
+            width: 250px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            font-family: 'Pogonia', cursive;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .footer-text {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .footer-column h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .footer-column h4::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: white;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #CCC;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: white;
+            color: #1D503A;
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 20px;
+            font-size: 14px;
+            color: #CCC;
+        }
+
+        /* Q&A Accordion */
+        .faq {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .accordion {
+            margin-bottom: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            background-color: #F4F4F4;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .accordion-content {
+            background-color: white;
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-content.active {
+            padding: 20px;
+            max-height: 200px;
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #1D503A;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .scroll-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            background-color: #143726;
+            transform: translateY(-5px);
+        }
+
+        /* Pop-up Sale Notification */
+        .popup {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            transform: translateY(150%);
+            transition: all 0.5s ease;
+        }
+
+        .popup.show {
+            transform: translateY(0);
+        }
+
+        .popup-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+
+        .popup-content h3 {
+            margin-bottom: 5px;
+            color: #1D503A;
+        }
+
+        .popup-content p {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .popup-btn {
+            padding: 5px 15px;
+            background-color: #1D503A;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .popup-btn:hover {
+            background-color: #143726;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes shine {
+            0% {
+                left: -100px;
+            }
+            20% {
+                left: 100%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+    </style>
+</head>
+
+<ht>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">OneFit Clothing</a>
+        <div class="search-container">
+            <input type="text" placeholder="Search products...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="nav-links">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="tshirts.html">T-Shirts</a>
+                <a href="hoodies.html">Hoodies</a>
+                <a href="login.html">Login</a>
+            </div>
+            <div class="icons">
+                <a href="cart.html" class="icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="badge">2</span>
+                </a>
+                <a href="myaccount.html" class="icon">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </nav><br>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Terms of Service</h1>
+            <p>Please read these terms carefully before using our services.</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="tos-content">
+            <div class="tos-navigation">
+                <h3>Contents</h3>
+                <ul>
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#definitions">Definitions</a></li>
+                    <li><a href="#account">Account Registration</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#restrictions">User Restrictions</a></li>
+                    <li><a href="#payment">Payment Terms</a></li>
+                    <li><a href="#intellectual-property">Intellectual Property</a></li>
+                    <li><a href="#disclaimer">Disclaimer of Warranties</a></li>
+                    <li><a href="#limitation">Limitation of Liability</a></li>
+                    <li><a href="#indemnification">Indemnification</a></li>
+                    <li><a href="#termination">Termination</a></li>
+                    <li><a href="#changes">Changes to Terms</a></li>
+                    <li><a href="#governing-law">Governing Law</a></li>
+                    <li><a href="#disputes">Dispute Resolution</a></li>
+                    <li><a href="#contact">Contact Information</a></li>
+                </ul>
+            </div>
+            
+            <div class="highlight-box">
+                <p><strong>PLEASE READ CAREFULLY:</strong> By accessing or using our services, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, you may not use our services.</p>
+            </div>
+            
+            <section id="introduction">
+                <h2>1. Introduction</h2>
+                <p>Welcome to OneFit Clothing Store. These Terms of Service ("Terms") govern your access to and use of our website, products, and services (collectively, the "Services").</p>
+                <p>By accessing or using our Services, you agree to be bound by these Terms and our Privacy Policy. If you are using our Services on behalf of a company or other legal entity, you represent that you have the authority to bind that entity to these Terms.</p>
+            </section>
+            
+            <section id="definitions">
+                <h2>2. Definitions</h2>
+                <p>Throughout these Terms, the following terms shall have the meanings defined below:</p>
+                <ul>
+                    <li><strong>"User,"</strong> "you," or "your" refers to any individual or entity that accesses or uses our Services.</li>
+                    <li><strong>"Content"</strong> refers to any text, graphics, images, music, software, audio, video, information, or other materials that may be viewed on, accessed through, or contributed to our Services.</li>
+                    <li><strong>"User Content"</strong> refers to any Content that a User posts, uploads, publishes, submits, or transmits to be made available through our Services.</li>
+                    <li><strong>"Intellectual Property Rights"</strong> means all patent rights, copyright rights, moral rights, rights of publicity, trademark, trade dress and service mark rights, goodwill, trade secret rights and other intellectual property rights as may now exist or hereafter come into existence, and all applications therefore and registrations, renewals and extensions thereof, under the laws of any state, country, territory or other jurisdiction.</li>
+                </ul>
+            </section>
+            
+            <section id="account">
+                <h2>3. Account Registration</h2>
+                <p>To access certain features of our Services, you may be required to register for an account. You agree to provide accurate, current, and complete information during the registration process and to update such information to keep it accurate, current, and complete.</p>
+                <p>You are responsible for safeguarding your account credentials and for any activities or actions under your account. We reserve the right to disable any user account at any time if, in our opinion, you have violated any provision of these Terms.</p>
+            </section>
+            
+            <section id="services">
+                <h2>4. Services</h2>
+                <p>Subject to these Terms, we grant you a limited, non-exclusive, non-transferable, and revocable license to access and use our Services for your personal or business purposes.</p>
+                <p>We reserve the right to modify, suspend, or discontinue the Services (or any part or feature thereof) at any time, with or without notice. We will not be liable if for any reason all or any part of the Services are unavailable at any time or for any period.</p>
+            </section>
+            
+            <section id="restrictions">
+                <h2>5. User Restrictions</h2>
+                <p>When using our Services, you agree not to:</p>
+                <ol>
+                    <li>Violate any applicable law, rule, or regulation;</li>
+                    <li>Infringe upon or violate our intellectual property rights or the intellectual property rights of others;</li>
+                    <li>Transmit or upload any viruses, malware, or other types of malicious software, or links to such software;</li>
+                    <li>Use the Services to send unsolicited or unauthorized advertising, promotional materials, spam, junk mail, chain letters, or any other form of duplicative or unsolicited messages;</li>
+                    <li>Interfere with or disrupt the operation of the Services or servers or networks connected to the Services;</li>
+                    <li>Impersonate or attempt to impersonate us, our employees, another user, or any other person or entity;</li>
+                    <li>Collect or store personal data about other users without their consent;</li>
+                    <li>Attempt to gain unauthorized access to any portion or feature of the Services, other accounts, computer systems, or networks connected to the Services;</li>
+                    <li>Use any automated means, including, but not limited to, agents, robots, scripts, or spiders, to access, monitor, or copy any part of the Services;</li>
+                    <li>Use the Services in any manner that could disable, overburden, damage, or impair the Services.</li>
+                </ol>
+            </section>
+            
+            <section id="payment">
+                <h2>6. Payment Terms</h2>
+                <p>If you subscribe to any of our paid Services, the following terms apply:</p>
+                <ul>
+                    <li>You agree to pay all fees or charges to your account based on the fees, charges, and billing terms in effect at the time a fee or charge is due and payable.</li>
+                    <li>All payment obligations are non-cancelable and all amounts paid are non-refundable, except as specifically provided in these Terms.</li>
+                    <li>We reserve the right to modify our pricing at any time. If we modify pricing for a service to which you subscribe, we will provide notice of the change through our website or by email at least 30 days before the change takes effect.</li>
+                    <li>You are responsible for all taxes associated with your use of our Services (excluding taxes based on our net income).</li>
+                </ul>
+            </section>
+            
+            <section id="intellectual-property">
+                <h2>7. Intellectual Property</h2>
+                <p>Our Services and their entire contents, features, and functionality (including but not limited to all information, software, text, displays, images, video, and audio, and the design, selection, and arrangement thereof), are owned by us, our licensors, or other providers of such material and are protected by copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws.</p>
+                <p><strong>User Content.</strong> By submitting, posting, or displaying User Content on or through our Services, you grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, adapt, publish, translate, distribute, and display such User Content in connection with providing and promoting our Services.</p>
+                <p>You represent and warrant that you own or have the necessary rights to the User Content you submit through our Services and that such User Content does not violate the intellectual property rights or any other rights of any third party.</p>
+            </section>
+            
+            <section id="disclaimer">
+                <h2>8. Disclaimer of Warranties</h2>
+                <p>YOUR USE OF THE SERVICES IS AT YOUR SOLE RISK. THE SERVICES ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR THAT THE SERVICES WILL BE UNINTERRUPTED OR ERROR-FREE.</p>
+            </section>
+            
+            <section id="limitation">
+                <h2>9. Limitation of Liability</h2>
+                <p>IN NO EVENT SHALL WE, OUR AFFILIATES, SERVICE PROVIDERS, EMPLOYEES, AGENTS, OFFICERS, OR DIRECTORS BE LIABLE FOR DAMAGES OF ANY KIND, UNDER ANY LEGAL THEORY, ARISING OUT OF OR IN CONNECTION WITH YOUR USE, OR INABILITY TO USE, THE SERVICES, INCLUDING ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO, PERSONAL INJURY, PAIN AND SUFFERING, EMOTIONAL DISTRESS, LOSS OF REVENUE, LOSS OF PROFITS, LOSS OF BUSINESS OR ANTICIPATED SAVINGS, LOSS OF USE, LOSS OF GOODWILL, LOSS OF DATA, AND WHETHER CAUSED BY TORT (INCLUDING NEGLIGENCE), BREACH OF CONTRACT OR OTHERWISE, EVEN IF FORESEEABLE.</p>
+            </section>
+            
+            <section id="indemnification">
+                <h2>10. Indemnification</h2>
+                <p>You agree to defend, indemnify, and hold harmless us, our affiliates, licensors, and service providers, and our and their respective officers, directors, employees, contractors, agents, licensors, suppliers, successors, and assigns from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to your violation of these Terms or your use of the Services.</p>
+            </section>
+            
+            <section id="termination">
+                <h2>11. Termination</h2>
+                <p>We may terminate or suspend your access to all or part of our Services, with or without notice, for any conduct that we, in our sole discretion, believe violates these Terms or is harmful to other users of our Services, to us, or to third parties, or for any other reason.</p>
+                <p>Upon termination, your right to use the Services will immediately cease. If you wish to terminate your account, you may simply discontinue using the Services or contact us to request account deletion.</p>
+            </section>
+            
+            <section id="changes">
+                <h2>12. Changes to Terms</h2>
+                <p>We reserve the right to revise and update these Terms from time to time at our sole discretion. All changes are effective immediately when we post them. Your continued use of the Services following the posting of revised Terms means that you accept and agree to the changes.</p>
+            </section>
+            
+            <section id="governing-law">
+                <h2>13. Governing Law</h2>
+                <p>These Terms and any dispute or claim arising out of or in connection with them or their subject matter or formation shall be governed by and construed in accordance with the laws of [Your State/Country], without giving effect to any choice or conflict of law provision or rule.</p>
+            </section>
+            
+            <section id="disputes">
+                <h2>14. Dispute Resolution</h2>
+                <p>Any legal action or proceeding arising under these Terms shall be brought exclusively in the federal or state courts located in [Your Jurisdiction], and you hereby consent to personal jurisdiction and venue therein.</p>
+                <p>Any cause of action or claim you may have arising out of or relating to these Terms or the Services must be commenced within one (1) year after the cause of action accrues, otherwise, such cause of action or claim is permanently barred.</p>
+            </section>
+            
+            <section id="contact">
+                <h2>15. Contact Information</h2>
+                <p>If you have any questions about these Terms, please contact us:</p>
+                <ul>
+                    <li>By email: support@onefitclothing.com </li>
+                    <li>By mail: 123 Fashion Street, Colombo 07, Sri Lanka</li>
+                    <li>By phone: +94 11 222 3333</li>
+                </ul>
+            </section>
+            
+            <p class="last-updated">Last Updated: March 10, 2025</p>
+        </div>
+    </div><br>
+    
+
+
+    <!-- Footer Section -->
+<footer class="footer">
+    <!-- Footer Top - Newsletter -->
+    <div class="footer-top">
+        <div class="container">
+            <div class="newsletter-wrapper">
+                <div class="newsletter-content">
+                    <h3>Be the first to get Updates & Offers!</h3>
+                    <p>Subscribe to our newsletter and get 10% off your first purchase</p>
+                </div>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer Main -->
+    <div class="footer-main">
+        <div class="container">
+            <div class="footer-columns">
+                <!-- About Company -->
+                <div class="footer-column">
+                    <div class="footer-logo">OneFit Clothing</div>
+                    <p class="footer-text">Elevate your wardrobe with our premium collection of printed t-shirts and hoodies designed exclusively for modern women.</p>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Fashion Street, Colombo 07, Sri Lanka</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+94 11 222 3333</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>support@onefitclothing.com</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Pinterest">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Orders -->
+                <div class="footer-column">
+                    <h4>Orders</h4>
+                    <ul>
+                        <li><a href="index.html">Search</a></li>
+                        <li><a href="tshirts.html">T shirts</a></li>
+                        <li><a href="hoodies.html">Hoodies</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="size.html">Size Guide</a></li>
+                        <li><a href="login.html">Log in</a></li>
+                    </ul>
+                </div>
+                
+                <!-- FAQs -->
+                <div class="footer-column">
+                    <h4>FAQs</h4>
+                    <div class="footer-accordion">
+                        <div class="footer-faq-item">
+                            <div class="footer-faq-question">
+                                <span>Shipping Information</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="footer-faq-answer">
+                                <p>We offer free shipping on all orders over RS: 5000.00. Standard delivery takes 3-5 business days.</p>
+                            </div>
+                        </div>
+                        <div class="footer-faq-item">
+                            <div class="footer-faq-question">
+                                <span>Return Policy</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="footer-faq-answer">
+                                <p>We accept returns within 30 days of purchase. Items must be unused with original tags.</p>
+                            </div>
+                        </div>
+                        <div class="footer-faq-item">
+                            <div class="footer-faq-question">
+                                <span>Size Guide</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="footer-faq-answer">
+                                <p>Please refer to our size chart on each product page for accurate measurements.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer Middle - Payment Methods & App Downloads -->
+    <div class="footer-middle">
+        <div class="container">
+            <div class="footer-middle-content">
+                <div class="payment-methods">
+                    <h5>Payment Methods</h5>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fab fa-cc-apple-pay"></i>
+                    </div>
+                </div>
+                <div class="app-download">
+                    <h5>Download Our App</h5>
+                    <div class="app-buttons">
+                        <a href="#" class="app-button">
+                            <i class="fab fa-apple"></i>
+                            <span>
+                                <small>Download on the</small>
+                                <strong>App Store</strong>
+                            </span>
+                        </a>
+                        <a href="#" class="app-button">
+                            <i class="fab fa-google-play"></i>
+                            <span>
+                                <small>GET IT ON</small>
+                                <strong>Google Play</strong>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer Bottom - Copyright & Secondary Links -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom-content">
+                <div class="copyright">
+                    <p>&copy; 2025 OneFit Clothing. All Rights Reserved.</p>
+                </div>
+                <div class="back-to-top" id="backToTop">
+                    <span>Back to top</span>
+                    <i class="fas fa-chevron-up"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- CSS for Advanced Footer -->
+<style>
+/* Footer Styles */
+.footer {
+    background-color: #1D503A;
+    color: white;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.footer::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Footer Top - Newsletter */
+.footer-top {
+    background-color: #143726;
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-top::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 50%;
+}
+
+.footer-top::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    right: -80px;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 50%;
+}
+
+.newsletter-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.newsletter-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.newsletter-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: white;
+}
+
+.newsletter-content p {
+    color: #ccc;
+}
+
+.newsletter-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.form-group {
+    display: flex;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.form-group input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+.form-group button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #F9E4DA 0%, #F9C6A7 100%);
+    color: #1D503A;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-group button:hover {
+    background: linear-gradient(135deg, #F9C6A7 0%, #F9E4DA 100%);
+    transform: translateY(-2px);
+}
+
+/* Footer Main */
+.footer-main {
+    padding: 70px 0 50px;
+    position: relative;
+}
+
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-logo {
+    font-family: 'Pogonia', 'Poppins', cursive; /* fallback added */
+    font-size: 28px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #ffffff, #F9E4DA);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.footer-text {
+    line-height: 1.6;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.footer-contact {
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.contact-item i {
+    color: #F9E4DA;
+    margin-right: 10px;
+    margin-top: 4px;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #F9E4DA 0%, #F9C6A7 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.social-icon:hover {
+    color: #1D503A;
+    transform: translateY(-5px);
+}
+
+.social-icon:hover::before {
+    opacity: 1;
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-column h4::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #F9E4DA, transparent);
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.footer-column ul li::before {
+    content: '›';
+    position: absolute;
+    left: -15px;
+    color: #F9E4DA;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.footer-column ul li:hover {
+    padding-left: 20px;
+}
+
+.footer-column ul li:hover::before {
+    opacity: 1;
+    left: 0;
+}
+
+.footer-column ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #F9E4DA;
+}
+
+/* Footer FAQ Accordion */
+.footer-accordion {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.footer-faq-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-faq-item:last-child {
+    border-bottom: none;
+}
+
+.footer-faq-question {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.footer-faq-question:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-faq-question i {
+    transition: transform 0.3s ease;
+}
+
+.footer-faq-item.active .footer-faq-question i {
+    transform: rotate(180deg);
+}
+
+.footer-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 15px;
+}
+
+.footer-faq-item.active .footer-faq-answer {
+    max-height: 100px;
+    padding: 0 15px 15px;
+}
+
+.footer-faq-answer p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Footer Middle - Payment Methods & App Downloads */
+.footer-middle {
+    padding: 40px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-middle-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.payment-methods, .app-download {
+    flex: 1;
+    min-width: 300px;
+}
+
+.payment-methods h5, .app-download h5 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #F9E4DA;
+}
+
+.payment-icons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.payment-icons i {
+    font-size: 30px;
+    color: #ddd;
+    transition: all 0.3s ease;
+}
+
+.payment-icons i:hover {
+    color: white;
+    transform: translateY(-3px);
+}
+
+.app-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.app-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.app-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.app-button i {
+    font-size: 24px;
+}
+
+.app-button span {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-button small {
+    font-size: 10px;
+    opacity: 0.8;
+}
+
+.app-button strong {
+    font-size: 14px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    padding: 25px 0;
+    font-size: 14px;
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.copyright p {
+    color: #aaa;
+}
+
+.secondary-links {
+    display: flex;
+    gap: 20px;
+}
+
+.secondary-links a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.secondary-links a:hover {
+    color: #F9E4DA;
+}
+
+.back-to-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+    color: #F9E4DA;
+    transform: translateY(-3px);
+}
+
+.back-to-top i {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.back-to-top:hover i {
+    background-color: #F9E4DA;
+    color: #1D503A;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .newsletter-wrapper,
+    .footer-columns,
+    .footer-middle-content,
+    .footer-bottom-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-column,
+    .payment-methods,
+    .app-download {
+        width: 100%;
+        min-width: unset;
+    }
+    
+    .copyright,
+    .secondary-links,
+    .back-to-top {
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+/* Animation for Footer Elements */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer-column {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.footer-column:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.footer-column:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.footer-column:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+/* Footer pulse animation for CTA elements */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(249, 228, 218, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(249, 228, 218, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(249, 228, 218, 0);
+    }
+}
+
+.form-group button {
+    animation: pulse 2s infinite;
+}
+</style>
+
+</body>
+</html>
+
+<!-- JavaScript for Footer Functionality -->
+<script>
+    // Interactive FAQ accordion in footer
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.footer-faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.footer-faq-question');
+            
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all items
+                faqItems.forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                });
+                
+                // If clicked item wasn't active before, open it
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // Back to top functionality
+        const backToTop = document.getElementById('backToTop');
+        if (backToTop) {
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+    });
+</script>
