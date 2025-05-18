@@ -57,22 +57,39 @@ function initCartFunctionality() {
 
   // Add to cart buttons
   const addToCartButtons = document.querySelectorAll(".add-to-cart");
-  if (addToCartButtons) {
-    addToCartButtons.forEach((button) => {
-      button.addEventListener("click", function (e) {
-        e.preventDefault();
+  // if (addToCartButtons) {
+  //   addToCartButtons.forEach((button) => {
+  //     button.addEventListener("click", function (e) {
+  //       e.preventDefault();
+  //       const sizeButtons = document.querySelectorAll(".size-btn");
+  //       let selectedSize = null;
 
-        const productId = this.getAttribute("data-id");
-        const productSize =
-          document.querySelector('select[name="size"]')?.value || "M";
-        const quantity =
-          document.querySelector('input[name="quantity"]')?.value || 1;
+  //       sizeButtons.forEach((button) => {
+  //         button.addEventListener("click", function () {
+  //           // Remove active class from all buttons
+  //           sizeButtons.forEach((btn) => (btn.style.backgroundColor = ""));
 
-        // Send AJAX request to add item to cart
-        addToCart(productId, productSize, quantity);
-      });
-    });
-  }
+  //           // Add active class to clicked button
+  //           this.style.backgroundColor = "#1D503A";
+  //           this.style.color = "white";
+
+  //           // Store selected size
+  //           selectedSize = this.getAttribute("data-size");
+  //           console.log("Selected size:", selectedSize);
+  //         });
+  //       });
+
+  //       const productId = this.getAttribute("data-id");
+  //       // const quantity =
+  //       //   document.querySelector('input[name="quantity"]')?.value || 1;
+  //   const quantityInput = document.getElementById("quantity");
+  //       const quantity = parseInt(quantityInput.value);
+
+  //       // Send AJAX request to add item to cart
+  //       addToCart(productId, selectedSize, quantity);
+  //     });
+  //   });
+  // }
 }
 
 /**
@@ -137,40 +154,40 @@ function removeCartItem(itemId) {
 /**
  * Add item to cart
  */
-function addToCart(productId, size, quantity) {
-  fetch("cart-update.php", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: `product_id=${productId}&size=${size}&quantity=${quantity}&action=add`,
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.success) {
-        // Show success message
-        const message = document.createElement("div");
-        message.className = "alert alert-success";
-        message.innerHTML =
-          'Product added to cart! <a href="cart.php">View Cart</a>';
+// function addToCart(productId, size, quantity) {
+//   fetch("cart-update.php", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/x-www-form-urlencoded",
+//     },
+//     body: `product_id=${productId}&size=${size}&quantity=${quantity}&action=add`,
+//   })
+//     .then((response) => response.json())
+//     .then((data) => {
+//       if (data.success) {
+//         // Show success message
+//         const message = document.createElement("div");
+//         message.className = "alert alert-success";
+//         message.innerHTML =
+//           'Product added to cart! <a href="cart.php">View Cart</a>';
 
-        // Insert message after product form
-        const productForm = document.querySelector(".product-form");
-        productForm.parentNode.insertBefore(message, productForm.nextSibling);
+//         // Insert message after product form
+//         const productForm = document.querySelector(".product-form");
+//         productForm.parentNode.insertBefore(message, productForm.nextSibling);
 
-        // Update cart badge
-        document.querySelector(".cart-badge").textContent = data.count;
+//         // Update cart badge
+//         document.querySelector(".cart-badge").textContent = data.count;
 
-        // Remove message after 3 seconds
-        setTimeout(() => {
-          message.remove();
-        }, 3000);
-      }
-    })
-    .catch((error) => {
-      console.error("Error adding to cart:", error);
-    });
-}
+//         // Remove message after 3 seconds
+//         setTimeout(() => {
+//           message.remove();
+//         }, 3000);
+//       }
+//     })
+//     .catch((error) => {
+//       console.error("Error adding to cart:", error);
+//     });
+// }
 
 /**
  * Initialize product gallery functionality

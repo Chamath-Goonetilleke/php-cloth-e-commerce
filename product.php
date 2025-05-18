@@ -103,21 +103,20 @@ include 'includes/header.php';
             <div class="options-container">
                 <label class="option-label">Size</label>
                 <div class="size-options">
-                    <div class="size-option" onclick="selectSize(this)">S</div>
-                    <div class="size-option active" onclick="selectSize(this)">M</div>
-                    <div class="size-option" onclick="selectSize(this)">L</div>
-                    <div class="size-option" onclick="selectSize(this)">XL</div>
-                    <div class="size-option" onclick="selectSize(this)">XXL</div>
+                    <button class="size-btn" data-size="S">S</button>
+                    <button class="size-btn" data-size="M">M</button>
+                    <button class="size-btn" data-size="L">L</button>
+                    <button class="size-btn" data-size="XL">XL</button>
                 </div>
 
                 <div class="quantity-selector">
                     <label class="option-label">Quantity</label>
-                    <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
-                    <input type="text" class="quantity-input" id="quantity" value="1" max="<?php echo $product['stock']; ?>">
-                    <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+                    <button id="decrease" class="quantity-btn">-</button>
+                    <input type="text" id="quantity" class="quantity-input" id="quantity" value="1" max="<?php echo $product['stock']; ?>">
+                    <button id="increase" class="quantity-btn">+</button>
                 </div>
 
-                <button class="add-to-cart" onclick="addToCart()" data-id="<?php echo $product['id']; ?>">Add to Cart</button>
+                <button id="addToCart" data-id="<?php echo $product['id']; ?>">Add to Cart</button>
             </div>
         </div>
     </div>
@@ -304,14 +303,15 @@ include 'includes/header.php';
         margin-bottom: 30px;
     }
 
-    .size-option {
+    .size-btn {
         border: 1px solid #ccc;
         padding: 8px 15px;
         cursor: pointer;
         transition: all 0.3s;
+        color: black;
     }
 
-    .size-option.active {
+    .size-btn.active {
         background-color: #333;
         color: white;
     }
@@ -341,7 +341,7 @@ include 'includes/header.php';
         border: 1px solid #ccc;
     }
 
-    .add-to-cart {
+    #addToCart {
         background-color: #e63946;
         color: white;
         border: none;
@@ -353,7 +353,7 @@ include 'includes/header.php';
         transition: all 0.3s;
     }
 
-    .add-to-cart:hover {
+    #addToCart:hover {
         background-color: #1D503A;
     }
 
@@ -494,45 +494,56 @@ include 'includes/header.php';
 </style>
 
 <script>
-    // Size selection functionality
-    function selectSize(element) {
-        // Remove active class from all size options
-        const sizeOptions = document.querySelectorAll('.size-option');
-        sizeOptions.forEach(option => {
-            option.classList.remove('active');
+    const sizeButtons = document.querySelectorAll('.size-btn');
+    let selectedSize = null;
+
+    sizeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            sizeButtons.forEach(btn => btn.style.backgroundColor = '');
+
+            // Add active class to clicked button
+            this.style.backgroundColor = '#1D503A';
+            this.style.color = 'white';
+
+            // Store selected size
+            selectedSize = this.getAttribute('data-size');
+            console.log('Selected size:', selectedSize);
+        });
+    });
+
+    // Quantity control
+    const quantityInput = document.getElementById('quantity');
+
+    document.getElementById('decrease').addEventListener('click', function() {
+        const currentValue = parseInt(quantityInput.value);
+        if (currentValue > 1) {
+            quantityInput.value = currentValue - 1;
+        }
+    });
+
+    document.getElementById('increase').addEventListener('click', function() {
+        const currentValue = parseInt(quantityInput.value);
+        quantityInput.value = currentValue + 1;
+    });
+
+    // Add to cart
+    document.getElementById('addToCart').addEventListener('click', function() {
+        if (!selectedSize) {
+            alert('Please select a size first');
+            return;
+        }
+
+        const productId = this.getAttribute('data-id');
+        const quantity = parseInt(quantityInput.value);
+
+        console.log('Adding to cart:', {
+            productId: productId,
+            size: selectedSize,
+            quantity: quantity
         });
 
-        // Add active class to the clicked element
-        element.classList.add('active');
-    }
-
-    // Quantity functionality
-    function increaseQuantity() {
-        const quantityInput = document.getElementById('quantity');
-        const currentQuantity = parseInt(quantityInput.value);
-        const maxQuantity = parseInt(quantityInput.getAttribute('max'));
-
-        if (currentQuantity < maxQuantity) {
-            quantityInput.value = currentQuantity + 1;
-        }
-    }
-
-    function decreaseQuantity() {
-        const quantityInput = document.getElementById('quantity');
-        const currentQuantity = parseInt(quantityInput.value);
-
-        if (currentQuantity > 1) {
-            quantityInput.value = currentQuantity - 1;
-        }
-    }
-
-    // Add to cart functionality
-    function addToCart() {
-        const selectedSize = document.querySelector('.size-option.active').textContent;
-        const quantity = document.getElementById('quantity').value;
-        const productId = document.querySelector('.add-to-cart').getAttribute('data-id');
-
-        // AJAX request to add to cart
+        // Send AJAX request
         fetch('cart-update.php', {
                 method: 'POST',
                 headers: {
@@ -543,19 +554,22 @@ include 'includes/header.php';
             })
             .then(response => response.json())
             .then(data => {
+                console.log('Response:', data);
+
                 if (data.success) {
-                    alert('Product added to cart!');
-                    // Update cart badge count if needed
-                    const cartBadge = document.querySelector('.badge');
-                    if (cartBadge) {
-                        cartBadge.textContent = data.count;
-                    }
+                    alert(data.message);
+
+                    // Refresh the page to show updated cart
+                    window.location.reload();
+                } else {
+                    alert('Error: ' + (data.message || 'Could not add to cart'));
                 }
             })
             .catch(error => {
-                console.error('Error adding to cart:', error);
+                console.error('Error:', error);
+                alert('Error adding to cart. See console for details.');
             });
-    }
+    });
 
     // Thumbnail image selection
     document.addEventListener('DOMContentLoaded', function() {
