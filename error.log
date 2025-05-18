@@ -887,3 +887,74 @@ Stack trace:
 [18-May-2025 08:16:50 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /Applications/MAMP/htdocs/onefitclothing/includes/config.php on line 27) in /Applications/MAMP/htdocs/onefitclothing/admin/product-edit.php on line 29
 [18-May-2025 08:17:31 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /Applications/MAMP/htdocs/onefitclothing/includes/config.php on line 27) in /Applications/MAMP/htdocs/onefitclothing/admin/product-edit.php on line 29
 [18-May-2025 08:21:17 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/onefitclothing/admin/includes/header.php:109) in /Applications/MAMP/htdocs/onefitclothing/admin/products.php on line 79
+[18-May-2025 08:26:47 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 307
+[18-May-2025 08:26:47 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 308
+[18-May-2025 08:26:47 UTC] PHP Deprecated:  ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 308
+[18-May-2025 08:26:47 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 08:26:47 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 307
+[18-May-2025 08:26:47 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 308
+[18-May-2025 08:26:47 UTC] PHP Deprecated:  ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 308
+[18-May-2025 08:26:47 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 08:26:47 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 307
+[18-May-2025 08:26:47 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 308
+[18-May-2025 08:26:47 UTC] PHP Deprecated:  ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 308
+[18-May-2025 08:26:47 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 08:26:47 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 307
+[18-May-2025 08:26:47 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 308
+[18-May-2025 08:26:47 UTC] PHP Deprecated:  ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 308
+[18-May-2025 08:26:47 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 17:30:31 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /Applications/MAMP/htdocs/onefitclothing/includes/config.php on line 27) in /Applications/MAMP/htdocs/onefitclothing/admin/product-edit.php on line 29
+[18-May-2025 17:31:15 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /Applications/MAMP/htdocs/onefitclothing/includes/config.php on line 27) in /Applications/MAMP/htdocs/onefitclothing/admin/product-edit.php on line 29
+[18-May-2025 18:05:58 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in /Applications/MAMP/htdocs/onefitclothing/admin/orders.php:51
+Stack trace:
+#0 /Applications/MAMP/htdocs/onefitclothing/admin/orders.php(51): mysqli_stmt->bind_param('s', 'processing')
+#1 {main}
+  thrown in /Applications/MAMP/htdocs/onefitclothing/admin/orders.php on line 51
+[18-May-2025 18:12:15 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/onefitclothing/admin/includes/header.php:109) in /Applications/MAMP/htdocs/onefitclothing/admin/settings.php on line 116
+[18-May-2025 18:14:23 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 307
+[18-May-2025 18:14:23 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 308
+[18-May-2025 18:14:23 UTC] PHP Deprecated:  ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 308
+[18-May-2025 18:14:23 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:14:23 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 307
+[18-May-2025 18:14:23 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 308
+[18-May-2025 18:14:23 UTC] PHP Deprecated:  ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 308
+[18-May-2025 18:14:23 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:14:23 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 307
+[18-May-2025 18:14:23 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 308
+[18-May-2025 18:14:23 UTC] PHP Deprecated:  ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 308
+[18-May-2025 18:14:23 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:14:23 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 307
+[18-May-2025 18:14:23 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 308
+[18-May-2025 18:14:23 UTC] PHP Deprecated:  ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 308
+[18-May-2025 18:14:23 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:15:19 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:15:19 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:15:19 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:15:19 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:16:50 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:16:50 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:16:50 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:16:50 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:16:51 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:16:51 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:16:51 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:16:51 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:16:51 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:16:51 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:16:51 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:16:51 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:18:12 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:18:12 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:18:12 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:18:12 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:18:15 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:18:15 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:18:15 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:18:15 UTC] PHP Warning:  Undefined array key "status" in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 318
+[18-May-2025 18:19:48 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'slug' in 'where clause' in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php:79
+Stack trace:
+#0 /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php(79): mysqli->prepare('SELECT id FROM ...')
+#1 {main}
+  thrown in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 79
+[18-May-2025 18:20:04 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/onefitclothing/admin/includes/header.php:109) in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 209
+[18-May-2025 18:21:03 UTC] PHP Warning:  Undefined variable $categoryColumnExists in /Applications/MAMP/htdocs/onefitclothing/admin/product-export.php on line 199

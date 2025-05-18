@@ -17,8 +17,6 @@ $search = isset($_GET['search']) ? $_GET['search'] : '';
 
 // Base query
 $queryBase = "FROM orders o LEFT JOIN users u ON o.user_id = u.id WHERE 1=1";
-$countQueryBase = "SELECT COUNT(*) as count $queryBase";
-$dataQueryBase = "SELECT o.*, u.email, u.full_name $queryBase";
 $params = array();
 $types = "";
 
@@ -37,6 +35,10 @@ if (!empty($search)) {
     $params[] = $searchParam;
     $types .= "sss";
 }
+
+// Now build the count and data queries
+$countQueryBase = "SELECT COUNT(*) as count $queryBase";
+$dataQueryBase = "SELECT o.*, u.email, u.full_name $queryBase";
 
 // Get total orders count
 $totalOrders = 0;
@@ -198,8 +200,8 @@ if ($result && $result->num_rows > 0) {
                                             style="background-color: <?php
                                                                         echo $order['status'] == 'pending' ? '#ffeaa7' : ($order['status'] == 'processing' ? '#81ecec' : ($order['status'] == 'shipped' ? '#74b9ff' : ($order['status'] == 'delivered' ? '#55efc4' : ($order['status'] == 'cancelled' ? '#fab1a0' : ''))));
                                                                         ?>; color: <?php
-                                                            echo $order['status'] == 'pending' ? '#d35400' : ($order['status'] == 'processing' ? '#0984e3' : ($order['status'] == 'shipped' ? '#0984e3' : ($order['status'] == 'delivered' ? '#00b894' : ($order['status'] == 'cancelled' ? '#d63031' : ''))));
-                                                            ?>; border-color: transparent; font-weight: 500;">
+                                                                                    echo $order['status'] == 'pending' ? '#d35400' : ($order['status'] == 'processing' ? '#0984e3' : ($order['status'] == 'shipped' ? '#0984e3' : ($order['status'] == 'delivered' ? '#00b894' : ($order['status'] == 'cancelled' ? '#d63031' : ''))));
+                                                                                    ?>; border-color: transparent; font-weight: 500;">
                                             <option value="pending" <?php echo $order['status'] == 'pending' ? 'selected' : ''; ?>>Pending</option>
                                             <option value="processing" <?php echo $order['status'] == 'processing' ? 'selected' : ''; ?>>Processing</option>
                                             <option value="shipped" <?php echo $order['status'] == 'shipped' ? 'selected' : ''; ?>>Shipped</option>
@@ -256,12 +258,13 @@ if ($result && $result->num_rows > 0) {
     }
 
     .status-select {
-        padding: 5px 10px;
+        text-align: center;
+        padding: 2px;
         border-radius: 20px;
-        font-size: 13px;
+        font-size: 15px;
         appearance: none;
         -webkit-appearance: none;
-        min-width: 120px;
+        min-width: 100px;
     }
 
     .update-status-btn {

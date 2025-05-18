@@ -304,8 +304,8 @@ if ($result && $result->num_rows > 0) {
                                     <?php echo !empty($category['parent_name']) ? htmlspecialchars($category['parent_name']) : '<span class="text-muted">None</span>'; ?>
                                 </td>
                                 <td>
-                                    <span class="badge badge-<?php echo $category['status'] === 'active' ? 'success' : 'warning'; ?>">
-                                        <?php echo ucfirst($category['status']); ?>
+                                    <span class="badge badge-<?php echo (isset($category['status']) && $category['status'] === 'active') ? 'success' : 'warning'; ?>">
+                                        <?php echo ucfirst($category['status'] ?? 'unknown'); ?>
                                     </span>
                                 </td>
                                 <td>
@@ -314,8 +314,6 @@ if ($result && $result->num_rows > 0) {
                                             data-id="<?php echo $category['id']; ?>"
                                             data-name="<?php echo htmlspecialchars($category['name']); ?>"
                                             data-description="<?php echo htmlspecialchars($category['description']); ?>"
-                                            data-parent-id="<?php echo $category['parent_id']; ?>"
-                                            data-status="<?php echo $category['status']; ?>">
                                             <i class="fas fa-edit"></i>
                                         </button>
                                         <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteCategoryModal"
