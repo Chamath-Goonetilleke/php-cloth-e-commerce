@@ -7,7 +7,7 @@ $showSaleBanner = true;
 
 // Get featured products
 $featuredProducts = [];
-$sql = "SELECT * FROM products WHERE is_featured = 1 LIMIT 6";
+$sql = "SELECT * FROM products WHERE is_featured = 1 LIMIT 4";
 $result = $conn->query($sql);
 
 if ($result && $result->num_rows > 0) {
@@ -37,6 +37,9 @@ include 'includes/header.php';
         <h1>Fashion That Feels Like You</h1>
         <p>Discover clothing that combines style, comfort, and quality craftsmanship, designed for the modern lifestyle.</p>
         <a href="tshirts.php" class="btn">Shop Collection</a>
+    </div>
+    <div class="sale-banner">
+        🔥 SUMMER SALE! Use code SUMMER25 for 25% off all items! Limited time offer! 🔥
     </div>
 </section>
 
@@ -70,18 +73,7 @@ include 'includes/header.php';
             </div>
         </div>
 
-        <div class="product-card">
-            <div class="product-image">
-                <img src="assets/images/products/Inferno Edge Tee 01.png" alt="New Arrivals">
-                <div class="product-actions">
-                    <a href="new-arrivals.php" class="product-action">View Collection</a>
-                </div>
-            </div>
-            <div class="product-info">
-                <h3 class="product-name">New Arrivals</h3>
-                <p>Check out our latest products</p>
-            </div>
-        </div>
+
     </div>
 </section>
 
@@ -163,10 +155,105 @@ include 'includes/header.php';
             </div>
         <?php endforeach; ?>
     </div>
-    <div class="text-center" style="margin-top: 30px;">
-        <a href="all-products.php" class="btn">View All Products</a>
+</section>
+
+<section class="stats">
+    <div class="stats-container">
+        <div class="stat-item">
+            <div class="stat-number">5000+</div>
+            <div class="stat-text">Happy Customers</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">300+</div>
+            <div class="stat-text">Unique Designs</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">98%</div>
+            <div class="stat-text">Satisfaction Rate</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">24/7</div>
+            <div class="stat-text">Customer Support</div>
+        </div>
     </div>
 </section>
+
+<!-- Customer Feedback Section -->
+<div class="feedback">
+    <div class="feedback-title">
+        <h2 class="section-title">What Our Customers Say</h2>
+    </div>
+    <div class="testimonials">
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <img src="team1.jpg" alt="Customer 1" class="testimonial-image">
+                <div>
+                    <div class="testimonial-name">Ushana Bandara</div>
+                    <div class="testimonial-date">March 15, 2025</div>
+                </div>
+            </div>
+            <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">The quality of the printed t-shirts is amazing! The designs stay vibrant even after multiple washes. Definitely my go-to store for unique clothing!</p>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <img src="team2.jpg" alt="Customer 2" class="testimonial-image">
+                <div>
+                    <div class="testimonial-name">Emily Rodriguez</div>
+                    <div class="testimonial-date">April 01, 2025</div>
+                </div>
+            </div>
+            <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="testimonial-text">I love my new hoodie! The fabric is soft and comfortable, perfect for chilly evenings. The fit is exactly as described. Will definitely order more!</p>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <img src="team3.jpg" alt="Customer 3" class="testimonial-image">
+                <div>
+                    <div class="testimonial-name">Jessica Kim</div>
+                    <div class="testimonial-date">May 15, 2024</div>
+                </div>
+            </div>
+            <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="testimonial-text">Great quality and amazing design! Totally worth the price.</p>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <img src="team4.jpg" alt="Customer 3" class="testimonial-image">
+                <div>
+                    <div class="testimonial-name">KPM Perera</div>
+                    <div class="testimonial-date">September 09, 2024</div>
+                </div>
+            </div>
+            <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="testimonial-text">OneFit has the best quality printed t-shirts! The fabric feels premium, and the designs are vibrant even after multiple washes. Highly recommended!</p>
+        </div>
+    </div>
+</div>
 
 <!-- Newsletter -->
 <section class="newsletter">

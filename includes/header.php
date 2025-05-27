@@ -19,6 +19,7 @@ if (!isset($pageTitle)) {
     <link rel="shortcut icon" href="<?php echo SITE_URL; ?>/assets/images/OneFit Clothing.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="<?php echo SITE_URL; ?>/assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo SITE_URL; ?>/assets/css/size.css">
 </head>
 
 <body>
@@ -55,12 +56,7 @@ if (!isset($pageTitle)) {
         </div>
     </nav>
 
-    <?php if (isset($showSaleBanner) && $showSaleBanner): ?>
-        <!-- Sale Banner -->
-        <div class="sale-banner">
-            🔥 SUMMER SALE! Use code SUMMER25 for 25% off all items! Limited time offer! 🔥
-        </div>
-    <?php endif; ?>
+
 
     <!-- Main Content -->
     <main>

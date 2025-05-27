@@ -958,3 +958,2263 @@ Stack trace:
   thrown in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 79
 [18-May-2025 18:20:04 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/onefitclothing/admin/includes/header.php:109) in /Applications/MAMP/htdocs/onefitclothing/admin/product-categories.php on line 209
 [18-May-2025 18:21:03 UTC] PHP Warning:  Undefined variable $categoryColumnExists in /Applications/MAMP/htdocs/onefitclothing/admin/product-export.php on line 199
+[22-May-2025 15:55:25 UTC] Adding to cart: Product ID: 9, Size: XL, Quantity: 3
+[22-May-2025 15:55:25 UTC] Cart after add: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:02 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 4
+[22-May-2025 15:57:02 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 4
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:03 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 5
+[22-May-2025 15:57:03 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 5
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:04 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 6
+[22-May-2025 15:57:04 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 6
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:04 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 7
+[22-May-2025 15:57:04 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 7
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:04 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 8
+[22-May-2025 15:57:04 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 8
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:04 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 9
+[22-May-2025 15:57:04 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 9
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:05 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 10
+[22-May-2025 15:57:05 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 10
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:05 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 11
+[22-May-2025 15:57:05 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 11
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:05 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 12
+[22-May-2025 15:57:05 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 12
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:05 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 13
+[22-May-2025 15:57:05 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 13
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:06 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 14
+[22-May-2025 15:57:06 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 14
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:06 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 15
+[22-May-2025 15:57:06 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 15
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:06 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 16
+[22-May-2025 15:57:06 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 16
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:07 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 17
+[22-May-2025 15:57:07 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 17
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:07 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 18
+[22-May-2025 15:57:07 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 18
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:08 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 19
+[22-May-2025 15:57:08 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 19
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:08 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 20
+[22-May-2025 15:57:08 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 20
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:08 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 21
+[22-May-2025 15:57:08 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 21
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:09 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 22
+[22-May-2025 15:57:09 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 22
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:09 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 23
+[22-May-2025 15:57:09 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 23
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:09 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 24
+[22-May-2025 15:57:09 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 24
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:10 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 25
+[22-May-2025 15:57:10 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 25
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:10 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 26
+[22-May-2025 15:57:10 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 26
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:10 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 27
+[22-May-2025 15:57:10 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 27
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:10 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 28
+[22-May-2025 15:57:10 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 28
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:11 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 29
+[22-May-2025 15:57:11 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 29
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:11 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 30
+[22-May-2025 15:57:11 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 30
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:11 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 31
+[22-May-2025 15:57:11 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 31
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:11 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 32
+[22-May-2025 15:57:11 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 32
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:12 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 33
+[22-May-2025 15:57:12 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 33
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:12 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 34
+[22-May-2025 15:57:12 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 34
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:12 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 35
+[22-May-2025 15:57:12 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 35
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:12 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 36
+[22-May-2025 15:57:12 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 36
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:13 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 37
+[22-May-2025 15:57:13 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 37
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:13 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 38
+[22-May-2025 15:57:13 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 38
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:13 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 39
+[22-May-2025 15:57:13 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 39
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:18 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 38
+[22-May-2025 15:57:18 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 38
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:19 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 37
+[22-May-2025 15:57:19 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 37
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:19 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 36
+[22-May-2025 15:57:19 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 36
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:19 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 35
+[22-May-2025 15:57:19 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 35
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:19 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 34
+[22-May-2025 15:57:19 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 34
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:19 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 33
+[22-May-2025 15:57:19 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 33
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:20 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 32
+[22-May-2025 15:57:20 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 32
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:20 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 31
+[22-May-2025 15:57:20 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 31
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:20 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 30
+[22-May-2025 15:57:20 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 30
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:20 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 29
+[22-May-2025 15:57:20 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 29
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:20 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 28
+[22-May-2025 15:57:20 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 28
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:21 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 27
+[22-May-2025 15:57:21 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 27
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:21 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 26
+[22-May-2025 15:57:21 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 26
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:21 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 25
+[22-May-2025 15:57:21 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 25
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:21 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 24
+[22-May-2025 15:57:21 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 24
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:22 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 23
+[22-May-2025 15:57:22 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 23
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:22 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 22
+[22-May-2025 15:57:22 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 22
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:22 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 21
+[22-May-2025 15:57:22 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 21
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:29 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 2
+[22-May-2025 15:57:29 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 2
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:29 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 2
+[22-May-2025 15:57:29 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 2
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:34 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 3
+[22-May-2025 15:57:34 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[22-May-2025 15:57:42 UTC] Updating cart item: ID: 682f48ed7bf21, Quantity: 4
+[22-May-2025 15:57:42 UTC] Cart after update: Array
+(
+    [0] => Array
+        (
+            [id] => 6827a52177758
+            [product_id] => 4
+            [name] => Inferno Edge Tee
+            [price] => 27.99
+            [quantity] => 2
+            [size] => L
+            [image] => assets/images/products/Inferno Edge Tee 01.png
+        )
+
+    [1] => Array
+        (
+            [id] => 6827ab41ee75d
+            [product_id] => 8
+            [name] => OneFit Originals Hoodie
+            [price] => 42.99
+            [quantity] => 3
+            [size] => L
+            [image] => assets/images/products/OneFit Originals Hoodie 01.png
+        )
+
+    [2] => Array
+        (
+            [id] => 682f48ed7bf21
+            [product_id] => 9
+            [name] => Gray Marl Cropped Hoodie
+            [price] => 42.99
+            [quantity] => 4
+            [size] => XL
+            [image] => assets/images/products/Gray Marl Cropped Hoodie.png
+        )
+
+)
+
+[26-May-2025 16:44:17 UTC] Adding to cart: Product ID: 5, Size: L, Quantity: 1
+[26-May-2025 16:44:17 UTC] Cart after add: Array
+(
+    [0] => Array
+        (
+            [id] => 68349a61e1bc6
+            [product_id] => 5
+            [name] => Drop-Shoulder Mid-Sleeve T-Shirt
+            [price] => 29.99
+            [quantity] => 1
+            [size] => L
+            [image] => assets/images/products/Drop-Shoulder Mid-Sleeve T-Shirt (1).png
+        )
+
+)
+
+[27-May-2025 17:46:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/onefitclothing/admin/includes/header.php:109) in /Applications/MAMP/htdocs/onefitclothing/admin/settings.php on line 116
+[27-May-2025 17:47:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/onefitclothing/admin/includes/header.php:109) in /Applications/MAMP/htdocs/onefitclothing/admin/settings.php on line 116
