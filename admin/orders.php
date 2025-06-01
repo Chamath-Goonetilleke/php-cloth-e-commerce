@@ -216,9 +216,7 @@ if ($result && $result->num_rows > 0) {
                                         <a href="order-detail.php?id=<?php echo $order['id']; ?>" class="btn btn-sm btn-primary" data-toggle="tooltip" title="View">
                                             <i class="fas fa-eye"></i>
                                         </a>
-                                        <a href="invoice-print.php?id=<?php echo $order['id']; ?>" class="btn btn-sm btn-secondary" target="_blank" data-toggle="tooltip" title="Print Invoice">
-                                            <i class="fas fa-print"></i>
-                                        </a>
+                                        
                                     </div>
                                 </td>
                             </tr>

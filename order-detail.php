@@ -92,7 +92,7 @@ include 'includes/header.php';
                                     </p>
                                 </div>
                                 <div class="item-price">
-                                    $<?php echo number_format($item['price'] * $item['quantity'], 2); ?>
+                                    LKR <?php echo number_format($item['price'] * $item['quantity'], 2); ?>
                                 </div>
                             </div>
                         <?php endforeach; ?>
@@ -108,13 +108,13 @@ include 'includes/header.php';
                     <div class="order-summary">
                         <div class="summary-row">
                             <span>Subtotal</span>
-                            <span>$<?php echo number_format($orderDetails['subtotal'], 2); ?></span>
+                            <span>LKR <?php echo number_format($orderDetails['subtotal'], 2); ?></span>
                         </div>
                         <div class="summary-row">
                             <span>Shipping</span>
                             <span>
                                 <?php if ($orderDetails['shipping'] > 0): ?>
-                                    $<?php echo number_format($orderDetails['shipping'], 2); ?>
+                                    LKR <?php echo number_format($orderDetails['shipping'], 2); ?>
                                 <?php else: ?>
                                     Free Shipping
                                 <?php endif; ?>
@@ -122,7 +122,7 @@ include 'includes/header.php';
                         </div>
                         <div class="summary-row total-row">
                             <span>Total</span>
-                            <span>$<?php echo number_format($orderDetails['total_amount'], 2); ?></span>
+                            <span>LKR <?php echo number_format($orderDetails['total_amount'], 2); ?></span>
                         </div>
                     </div>
                 </div>

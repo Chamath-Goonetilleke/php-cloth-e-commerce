@@ -67,11 +67,6 @@ if (!isset($pageTitle)) {
                                 <i class="fas fa-users"></i> Users
                             </a>
                         </li>
-                        <li>
-                            <a href="<?php echo ADMIN_URL; ?>/settings.php" class="<?php echo basename($_SERVER['PHP_SELF']) === 'settings.php' ? 'active' : ''; ?>">
-                                <i class="fas fa-cog"></i> Settings
-                            </a>
-                        </li>
                     </ul>
                 </nav>
 
@@ -87,10 +82,10 @@ if (!isset($pageTitle)) {
                 <!-- Top Header Bar -->
                 <header class="top-header">
                     <div class="search-container">
-                        <form action="search.php" method="GET">
+                        <!-- <form action="search.php" method="GET">
                             <input type="text" name="query" placeholder="Search...">
                             <button type="submit"><i class="fas fa-search"></i></button>
-                        </form>
+                        </form> -->
                     </div>
 
                     <div class="admin-profile">
@@ -106,9 +101,7 @@ if (!isset($pageTitle)) {
                                 <i class="fas fa-chevron-down"></i>
                             </button>
                             <div class="dropdown-menu">
-                                <a href="<?php echo ADMIN_URL; ?>/profile.php">
-                                    <i class="fas fa-user"></i> Profile
-                                </a>
+
                                 <a href="<?php echo ADMIN_URL; ?>/logout.php">
                                     <i class="fas fa-sign-out-alt"></i> Logout
                                 </a>

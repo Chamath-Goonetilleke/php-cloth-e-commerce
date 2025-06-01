@@ -217,7 +217,8 @@ if ($result && $result->num_rows > 0) {
                         <th>Name</th>
                         <th>Email</th>
                         <th>Registered On</th>
-                        <th>Actions</th>
+                        <th>Status</th>
+                        <!-- <th>Actions</th> -->
                     </tr>
                 </thead>
                 <tbody>
@@ -231,12 +232,19 @@ if ($result && $result->num_rows > 0) {
                                 <td><?php echo isset($user['full_name']) ? $user['full_name'] : 'N/A'; ?></td>
                                 <td><?php echo $user['email']; ?></td>
                                 <td><?php echo date('M d, Y', strtotime($user['created_at'])); ?></td>
-                                <td>
+                                <!-- <td>
                                     <div class="actions">
                                         <a href="user-edit.php?id=<?php echo $user['id']; ?>" class="btn btn-sm btn-secondary" data-toggle="tooltip" title="Edit User">
                                             <i class="fas fa-edit"></i>
                                         </a>
                                     </div>
+                                </td> -->
+                                <td>
+                                    <?php if (!empty($user['blocked'])): ?>
+                                        <span class="badge badge-danger">Blocked</span>
+                                    <?php else: ?>
+                                        <span class="badge badge-success">Active</span>
+                                    <?php endif; ?>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
@@ -247,24 +255,19 @@ if ($result && $result->num_rows > 0) {
     </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-    // Initialize charts when document is ready
-    $(document).ready(function() {
-        // Sales Chart
+    // Sales Chart
+    document.addEventListener('DOMContentLoaded', function() {
         var salesChartEl = document.getElementById('salesChart').getContext('2d');
-
-        // Prepare data for chart
         var months = [];
         var sales = [];
         var orderCounts = [];
-
         <?php foreach ($monthlySales as $data): ?>
             months.push('<?php echo $data['month']; ?>');
-            sales.push(<?php echo $data['total']; ?>);
+            sales.push(<?php echo $data['total'] ? $data['total'] : 0; ?>);
             orderCounts.push(<?php echo $data['count']; ?>);
         <?php endforeach; ?>
-
-        // Create chart
         var salesChart = new Chart(salesChartEl, {
             type: 'bar',
             data: {
@@ -327,17 +330,18 @@ if ($result && $result->num_rows > 0) {
                         }
                     ]
                 },
-                tooltips: {
-                    callbacks: {
-                        label: function(tooltipItem, data) {
-                            var dataset = data.datasets[tooltipItem.datasetIndex];
-                            var value = dataset.data[tooltipItem.index];
-
-                            if (dataset.label.includes('Sales')) {
-                                return dataset.label + ': LKR ' + value.toLocaleString();
+                plugins: {
+                    legend: {
+                        display: true
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                if (context.dataset.label.includes('Sales')) {
+                                    return context.dataset.label + ': LKR ' + context.parsed.y.toLocaleString();
+                                }
+                                return context.dataset.label + ': ' + context.parsed.y;
                             }
-
-                            return dataset.label + ': ' + value;
                         }
                     }
                 }

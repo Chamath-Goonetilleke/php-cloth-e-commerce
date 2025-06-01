@@ -35,9 +35,32 @@ include 'includes/header.php';
             </div>
         <?php else: ?>
             <?php foreach ($products as $product): ?>
+                <?php
+                // Fetch average rating and review count for this product
+                $avgRating = 0;
+                $reviewCount = 0;
+                $stmt = $conn->prepare("SELECT AVG(rating) as avg_rating, COUNT(*) as review_count FROM reviews WHERE product_id = ?");
+                $stmt->bind_param("i", $product['id']);
+                $stmt->execute();
+                $result = $stmt->get_result();
+                if ($row = $result->fetch_assoc()) {
+                    $avgRating = $row['avg_rating'] !== null ? round($row['avg_rating'], 1) : 0.0;
+                    $reviewCount = (int)$row['review_count'];
+                }
+                ?>
                 <div class="product-card">
                     <img src="<?php echo $product['image_path']; ?>" alt="<?php echo $product['name']; ?>">
                     <h3><?php echo $product['name']; ?></h3><br><br>
+                    <div class="stars">
+                        <?php
+                        $fullStars = floor($avgRating);
+                        $halfStar = ($avgRating - $fullStars) >= 0.5;
+                        for ($i = 0; $i < $fullStars; $i++) echo '★';
+                        if ($halfStar) echo '½';
+                        for ($i = $fullStars + $halfStar; $i < 5; $i++) echo '☆';
+                        ?>
+                        <span style="margin-left:8px;font-size:13px;color:#888;">(<?php echo $reviewCount; ?>)</span>
+                    </div>
                     <p class="price">RS: <?php echo $product['price']; ?> LKR
                         <?php if ($product['sale_price']): ?>
                             <span class="discount">-<?php
@@ -46,9 +69,6 @@ include 'includes/header.php';
                                                     ?>%</span>
                         <?php endif; ?>
                     </p>
-                    <div class="stars">
-                        ★★★★☆
-                    </div>
                     <a href="product.php?id=<?php echo $product['id']; ?>" class="btn">View Product</a>
                 </div>
             <?php endforeach; ?>

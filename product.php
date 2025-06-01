@@ -45,6 +45,38 @@ if ($result->num_rows > 0) {
     }
 }
 
+// Check if product is in wishlist (if logged in)
+$isWishlisted = false;
+if (isset($_SESSION['user_id'])) {
+    $stmt = $conn->prepare("SELECT 1 FROM wishlists WHERE user_id = ? AND product_id = ?");
+    $stmt->bind_param("ii", $_SESSION['user_id'], $productId);
+    $stmt->execute();
+    $stmt->store_result();
+    $isWishlisted = $stmt->num_rows > 0;
+}
+
+// Fetch average rating and review count for this product
+$avgRating = 0;
+$reviewCount = 0;
+$stmt = $conn->prepare("SELECT AVG(rating) as avg_rating, COUNT(*) as review_count FROM reviews WHERE product_id = ?");
+$stmt->bind_param("i", $productId);
+$stmt->execute();
+$result = $stmt->get_result();
+if ($row = $result->fetch_assoc()) {
+    $avgRating = $row['avg_rating'] !== null ? round($row['avg_rating'], 1) : 0.0;
+    $reviewCount = (int)$row['review_count'];
+}
+
+// Fetch reviews for this product
+$reviews = [];
+$stmt = $conn->prepare("SELECT r.*, u.full_name FROM reviews r JOIN users u ON r.user_id = u.id WHERE r.product_id = ? ORDER BY r.created_at DESC");
+$stmt->bind_param("i", $productId);
+$stmt->execute();
+$result = $stmt->get_result();
+while ($row = $result->fetch_assoc()) {
+    $reviews[] = $row;
+}
+
 // Include header
 include 'includes/header.php';
 ?>
@@ -79,7 +111,15 @@ include 'includes/header.php';
         </div>
 
         <div class="product-info">
-            <h1 class="product-title"><?php echo $product['name']; ?></h1>
+            <div class="product-header">
+                <h1 class="product-title"><?php echo $product['name']; ?></h1>
+                <button class="wishlist-btn <?php echo $isWishlisted ? 'wishlisted' : ''; ?>" id="wishlistBtn" title="<?php echo $isWishlisted ? 'Remove from Wishlist' : 'Add to Wishlist'; ?>">
+                    <svg class="wishlist-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+
             <div class="product-price">
                 <?php if ($product['sale_price']): ?>
                     RS: <?php echo $product['sale_price']; ?> LKR <span class="discount">-<?php
@@ -92,8 +132,16 @@ include 'includes/header.php';
             </div>
 
             <div class="product-rating">
-                <div class="stars">★★★★☆</div>
-                <span>(24 reviews)</span>
+                <div class="stars">
+                    <?php
+                    $fullStars = floor($avgRating);
+                    $halfStar = ($avgRating - $fullStars) >= 0.5;
+                    for ($i = 0; $i < $fullStars; $i++) echo '★';
+                    if ($halfStar) echo '½';
+                    for ($i = $fullStars + $halfStar; $i < 5; $i++) echo '☆';
+                    ?>
+                </div>
+                <span>(<?php echo $reviewCount; ?> review<?php echo $reviewCount == 1 ? '' : 's'; ?>, avg <?php echo $avgRating; ?>★)</span>
             </div>
 
             <div class="product-description">
@@ -161,20 +209,27 @@ include 'includes/header.php';
 
     <div class="reviews-section">
         <h2 class="reviews-title">Customer Reviews</h2>
-        <div class="review-card">
-            <div class="review-header">
-                <div class="reviewer-name">John D.</div>
-                <div class="stars">★★★★★</div>
+        <?php if (empty($reviews)): ?>
+            <div class="review-card">
+                <p>No reviews yet. Be the first to review this product!</p>
             </div>
-            <p>I absolutely love this product. The material is high quality and it fits perfectly. Would definitely buy again!</p>
-        </div>
-        <div class="review-card">
-            <div class="review-header">
-                <div class="reviewer-name">Sarah M.</div>
-                <div class="stars">★★★★☆</div>
-            </div>
-            <p>The product is good quality and looks nice. However, it runs a bit small so consider ordering a size up.</p>
-        </div>
+        <?php else: ?>
+            <?php foreach ($reviews as $review): ?>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-name"><?php echo htmlspecialchars($review['full_name']); ?></div>
+                        <div class="stars">
+                            <?php
+                            for ($i = 0; $i < $review['rating']; $i++) echo '★';
+                            for ($i = $review['rating']; $i < 5; $i++) echo '☆';
+                            ?>
+                        </div>
+                    </div>
+                    <p class="review-date"><?php echo date('F j, Y', strtotime($review['created_at'])); ?></p>
+                    <p><?php echo nl2br(htmlspecialchars($review['feedback'])); ?></p>
+                </div>
+            <?php endforeach; ?>
+        <?php endif; ?>
     </div>
 
     <?php if (!empty($relatedProducts)): ?>
@@ -260,9 +315,71 @@ include 'includes/header.php';
         min-width: 300px;
     }
 
+    /* Enhanced product header with wishlist button */
+    .product-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+
     .product-title {
         font-size: 32px;
-        margin-bottom: 10px;
+        margin: 0;
+        flex: 1;
+        margin-right: 20px;
+    }
+
+    /* Wishlist button styling */
+    .wishlist-btn {
+        background: none;
+        border: 2px solid #ddd;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        color: #999;
+    }
+
+    .wishlist-btn:hover {
+        border-color: #e63946;
+        background-color: #fff5f5;
+        transform: translateY(-2px);
+    }
+
+    .wishlist-btn.wishlisted {
+        color: #e63946;
+        border-color: #e63946;
+        background-color: #fff5f5;
+    }
+
+    .wishlist-btn.wishlisted:hover {
+        background-color: #ffe0e0;
+    }
+
+    .wishlist-icon {
+        width: 24px;
+        height: 24px;
+        transition: all 0.3s ease;
+    }
+
+    .wishlist-btn.wishlisted .wishlist-icon path {
+        fill: currentColor;
+        stroke: currentColor;
+    }
+
+    .wishlist-btn:not(.wishlisted) .wishlist-icon path {
+        fill: none;
+        stroke: currentColor;
+    }
+
+    /* Animation for wishlist button click */
+    .wishlist-btn:active {
+        transform: scale(0.95);
     }
 
     .product-price {
@@ -491,6 +608,23 @@ include 'includes/header.php';
         background-color: #f8f9fa;
         transform: translateY(-2px);
     }
+
+    /* Responsive design for wishlist button */
+    @media (max-width: 768px) {
+        .product-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .wishlist-btn {
+            align-self: flex-end;
+            margin-top: 10px;
+        }
+
+        .product-title {
+            margin-right: 0;
+        }
+    }
 </style>
 
 <script>
@@ -587,6 +721,49 @@ include 'includes/header.php';
             });
         });
     });
+
+    // Enhanced wishlist button logic
+    const wishlistBtn = document.getElementById('wishlistBtn');
+    if (wishlistBtn) {
+        wishlistBtn.addEventListener('click', function() {
+            const isWishlisted = wishlistBtn.classList.contains('wishlisted');
+            const action = isWishlisted ? 'remove' : 'add';
+
+            // Disable button during request
+            wishlistBtn.disabled = true;
+
+            fetch('wishlist-update.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: `product_id=<?php echo $productId; ?>&action=${action}`
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        // Toggle wishlist state
+                        if (action === 'add') {
+                            wishlistBtn.classList.add('wishlisted');
+                            wishlistBtn.title = 'Remove from Wishlist';
+                        } else {
+                            wishlistBtn.classList.remove('wishlisted');
+                            wishlistBtn.title = 'Add to Wishlist';
+                        }
+                    } else {
+                        alert(data.message || 'Error updating wishlist');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error updating wishlist. Please try again.');
+                })
+                .finally(() => {
+                    // Re-enable button
+                    wishlistBtn.disabled = false;
+                });
+        });
+    }
 </script>
 
 <?php

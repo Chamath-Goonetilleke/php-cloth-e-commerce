@@ -19,13 +19,12 @@ if (!isset($pageTitle)) {
     <link rel="shortcut icon" href="<?php echo SITE_URL; ?>/assets/images/OneFit Clothing.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="<?php echo SITE_URL; ?>/assets/css/style.css">
-    <link rel="stylesheet" href="<?php echo SITE_URL; ?>/assets/css/size.css">
 </head>
 
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <a href="<?php echo SITE_URL; ?>" class="logo">OneFit</a>
+        <a href="<?php echo SITE_URL; ?>" class="logo">OneFit Clothing</a>
         <div class="search-container">
             <form action="<?php echo SITE_URL; ?>/search.php" method="GET">
                 <input type="text" name="q" placeholder="Search for products...">

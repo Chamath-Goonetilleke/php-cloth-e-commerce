@@ -39,14 +39,19 @@ function login($username, $password)
 {
     global $conn;
 
-    // Get user by username or email
-    $stmt = $conn->prepare("SELECT id, username, password, role FROM users WHERE username = ? OR email = ?");
+    // Get user by username or email, including blocked status
+    $stmt = $conn->prepare("SELECT id, username, password, role, blocked FROM users WHERE username = ? OR email = ?");
     $stmt->bind_param("ss", $username, $username);
     $stmt->execute();
     $result = $stmt->get_result();
 
     if ($result->num_rows === 1) {
         $user = $result->fetch_assoc();
+
+        // Check if blocked
+        if (!empty($user['blocked'])) {
+            return 'blocked';
+        }
 
         // Verify password
         if (password_verify($password, $user['password'])) {

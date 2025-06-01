@@ -110,7 +110,10 @@ if ($result && $result->num_rows > 0) {
 
             <div class="d-flex">
                 <a href="products.php" class="btn btn-secondary mr-10">Reset</a>
-                <a href="product-categories.php" class="btn btn-outline-primary">Manage Categories</a>
+                <a href="product-categories.php" class="btn btn-outline-primary mr-10">Manage Categories</a>
+                <a href="product-export.php" class="btn btn-outline-primary">
+                    <i class="fas fa-file-export"></i> Export Products
+                </a>
             </div>
         </div>
 
@@ -201,7 +204,7 @@ if ($result && $result->num_rows > 0) {
 </div>
 
 <!-- Add Product Template Link -->
-<div class="card mt-20">
+<!-- <div class="card mt-20">
     <div class="card-header">
         <h3 class="card-title">Quick Actions</h3>
     </div>
@@ -213,12 +216,10 @@ if ($result && $result->num_rows > 0) {
             <a href="product-import.php" class="btn btn-secondary mr-10 mb-10">
                 <i class="fas fa-file-import"></i> Import Products
             </a>
-            <a href="product-export.php" class="btn btn-outline-primary mb-10">
-                <i class="fas fa-file-export"></i> Export Products
-            </a>
+
         </div>
     </div>
-</div>
+</div> -->
 
 <?php
 // Include footer

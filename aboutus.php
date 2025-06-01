@@ -8,120 +8,120 @@ include 'includes/header.php';
 ?>
 
 <!-- About Us Content -->
-<header>
-    <div class="container">
-        <h1>About Us</h1>
-        <p>Learn more about our company, mission, and the dedicated team behind our success.</p>
+<header class="abtus-header">
+    <div class="abtus-container">
+        <h1 class="abtus-main-title">About Us</h1>
+        <p class="abtus-header-text">Learn more about our company, mission, and the dedicated team behind our success.</p>
     </div>
 </header>
 
-<div class="container">
-    <div class="about-content">
-        <section class="company-intro">
-            <h2>Our Story</h2>
-            <p>Founded in 2020, OneFit Clothing Store has grown from a small startup with big dreams to an industry leader in innovative solutions. Our journey began when our founders identified a critical gap in the market and developed a vision to address it with cutting-edge technology and exceptional service.</p>
-            <p>Today, we serve thousands of clients worldwide, helping them achieve their goals through our comprehensive suite of products and services. We remain committed to the core values that have guided us from the beginning: innovation, integrity, and customer satisfaction.</p>
+<div class="abtus-container">
+    <div class="abtus-content">
+        <section class="abtus-company-intro">
+            <h2 class="abtus-section-title">Our Story</h2>
+            <p class="abtus-intro-text">Founded in 2020, OneFit Clothing Store has grown from a small startup with big dreams to an industry leader in innovative solutions. Our journey began when our founders identified a critical gap in the market and developed a vision to address it with cutting-edge technology and exceptional service.</p>
+            <p class="abtus-intro-text">Today, we serve thousands of clients worldwide, helping them achieve their goals through our comprehensive suite of products and services. We remain committed to the core values that have guided us from the beginning: innovation, integrity, and customer satisfaction.</p>
         </section>
 
-        <section class="mission-vision">
-            <div class="mission">
-                <h2>Our Mission</h2>
-                <p>To empower businesses and individuals with innovative solutions that solve complex problems, enhance productivity, and drive success in an ever-evolving digital landscape.</p>
+        <section class="abtus-mission-vision">
+            <div class="abtus-mission">
+                <h2 class="abtus-section-title">Our Mission</h2>
+                <p class="abtus-mission-text">To empower businesses and individuals with innovative solutions that solve complex problems, enhance productivity, and drive success in an ever-evolving digital landscape.</p>
             </div>
-            <div class="vision">
-                <h2>Our Vision</h2>
-                <p>To be the global leader in our industry, recognized for excellence, innovation, and the positive impact we create for our clients, employees, and communities around the world.</p>
-            </div>
-        </section>
-
-        <section class="values-section">
-            <h2>Our Core Values</h2>
-            <div class="values-grid">
-                <div class="value-item">
-                    <div class="value-icon">&#9733;</div>
-                    <h3>Innovation</h3>
-                    <p>We continuously push boundaries and embrace new technologies to create groundbreaking solutions.</p>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon">&#9829;</div>
-                    <h3>Integrity</h3>
-                    <p>We operate with honesty, transparency, and ethical standards in all our business dealings.</p>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon">&#9786;</div>
-                    <h3>Customer Focus</h3>
-                    <p>We place our customers at the center of everything we do, prioritizing their needs and success.</p>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon">&#9775;</div>
-                    <h3>Excellence</h3>
-                    <p>We strive for the highest quality in our products, services, and internal processes.</p>
-                </div>
+            <div class="abtus-vision">
+                <h2 class="abtus-section-title">Our Vision</h2>
+                <p class="abtus-vision-text">To be the global leader in our industry, recognized for excellence, innovation, and the positive impact we create for our clients, employees, and communities around the world.</p>
             </div>
         </section>
 
-        <section class="team-section">
-            <h2>Our Leadership Team</h2>
-            <p>Meet the dedicated professionals who guide our company's vision and operations.</p>
-            <div class="team-members">
-                <div class="team-member">
-                    <div class="team-photo"> <img src="mem1.jpg" alt="member 1"></div>
-                    <h3>Methuli Lawanma</h3>
-                    <p class="position">CEO & Founder</p>
-                    <p>Methuli brings over 20 years of industry experience and a passion for innovative leadership.</p>
+        <section class="abtus-values-section">
+            <h2 class="abtus-section-title">Our Core Values</h2>
+            <div class="abtus-values-grid">
+                <div class="abtus-value-item">
+                    <div class="abtus-value-icon">&#9733;</div>
+                    <h3 class="abtus-value-title">Innovation</h3>
+                    <p class="abtus-value-text">We continuously push boundaries and embrace new technologies to create groundbreaking solutions.</p>
                 </div>
-                <div class="team-member">
-                    <div class="team-photo"> <img src="mem2.jpg" alt="member 2"></div>
-                    <h3>Vinugi Dhamsa</h3>
-                    <p class="position">Creative Director</p>
-                    <p>Vinugi designs trendy t-shirts and hoodies that reflect the bold, confident spirit of the OneFit brand.</p>
+                <div class="abtus-value-item">
+                    <div class="abtus-value-icon">&#9829;</div>
+                    <h3 class="abtus-value-title">Integrity</h3>
+                    <p class="abtus-value-text">We operate with honesty, transparency, and ethical standards in all our business dealings.</p>
                 </div>
-                <div class="team-member">
-                    <div class="team-photo"> <img src="mem4.jpg" alt="member 3"></div>
-                    <h3>Emily Johnson</h3>
-                    <p class="position">Marketing & Social Media Manager</p>
-                    <p>Emily promotes OneFit across digital platforms, building brand awareness and engaging with a loyal customer base.</p>
+                <div class="abtus-value-item">
+                    <div class="abtus-value-icon">&#9786;</div>
+                    <h3 class="abtus-value-title">Customer Focus</h3>
+                    <p class="abtus-value-text">We place our customers at the center of everything we do, prioritizing their needs and success.</p>
+                </div>
+                <div class="abtus-value-item">
+                    <div class="abtus-value-icon">&#9775;</div>
+                    <h3 class="abtus-value-title">Excellence</h3>
+                    <p class="abtus-value-text">We strive for the highest quality in our products, services, and internal processes.</p>
                 </div>
             </div>
         </section>
 
-        <section class="milestones">
-            <h2>Our Journey</h2>
-            <p>A timeline of key milestones that have shaped our growth and success.</p>
-            <div class="timeline">
-                <div class="milestone left">
-                    <div class="milestone-content">
-                        <div class="milestone-year">2020</div>
-                        <h3>Company Founded</h3>
-                        <p>OneFit Clothing Store was established with a mission to revolutionize the industry.</p>
+        <section class="abtus-team-section">
+            <h2 class="abtus-section-title">Our Leadership Team</h2>
+            <p class="abtus-team-intro">Meet the dedicated professionals who guide our company's vision and operations.</p>
+            <div class="abtus-team-members">
+                <div class="abtus-team-member">
+                    <div class="abtus-team-photo"> <img src="mem1.jpg" alt="member 1"></div>
+                    <h3 class="abtus-member-name">Methuli Lawanma</h3>
+                    <p class="abtus-member-position">CEO & Founder</p>
+                    <p class="abtus-member-bio">Methuli brings over 20 years of industry experience and a passion for innovative leadership.</p>
+                </div>
+                <div class="abtus-team-member">
+                    <div class="abtus-team-photo"> <img src="mem2.jpg" alt="member 2"></div>
+                    <h3 class="abtus-member-name">Vinugi Dhamsa</h3>
+                    <p class="abtus-member-position">Creative Director</p>
+                    <p class="abtus-member-bio">Vinugi designs trendy t-shirts and hoodies that reflect the bold, confident spirit of the OneFit brand.</p>
+                </div>
+                <div class="abtus-team-member">
+                    <div class="abtus-team-photo"> <img src="mem4.jpg" alt="member 3"></div>
+                    <h3 class="abtus-member-name">Emily Johnson</h3>
+                    <p class="abtus-member-position">Marketing & Social Media Manager</p>
+                    <p class="abtus-member-bio">Emily promotes OneFit across digital platforms, building brand awareness and engaging with a loyal customer base.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="abtus-milestones">
+            <h2 class="abtus-section-title">Our Journey</h2>
+            <p class="abtus-milestones-intro">A timeline of key milestones that have shaped our growth and success.</p>
+            <div class="abtus-timeline">
+                <div class="abtus-milestone abtus-left">
+                    <div class="abtus-milestone-content">
+                        <div class="abtus-milestone-year">2020</div>
+                        <h3 class="abtus-milestone-title">Company Founded</h3>
+                        <p class="abtus-milestone-text">OneFit Clothing Store was established with a mission to revolutionize the industry.</p>
                     </div>
                 </div>
-                <div class="milestone right">
-                    <div class="milestone-content">
-                        <div class="milestone-year">2022</div>
-                        <h3>First Major Product Launch</h3>
-                        <p>We launched our flagship product to critical acclaim and market success.</p>
+                <div class="abtus-milestone abtus-right">
+                    <div class="abtus-milestone-content">
+                        <div class="abtus-milestone-year">2022</div>
+                        <h3 class="abtus-milestone-title">First Major Product Launch</h3>
+                        <p class="abtus-milestone-text">We launched our flagship product to critical acclaim and market success.</p>
                     </div>
                 </div>
-                <div class="milestone left">
-                    <div class="milestone-content">
-                        <div class="milestone-year">2023</div>
-                        <h3>International Expansion</h3>
-                        <p>Opened offices in Europe and Asia to better serve our global client base.</p>
+                <div class="abtus-milestone abtus-left">
+                    <div class="abtus-milestone-content">
+                        <div class="abtus-milestone-year">2023</div>
+                        <h3 class="abtus-milestone-title">International Expansion</h3>
+                        <p class="abtus-milestone-text">Opened offices in Europe and Asia to better serve our global client base.</p>
                     </div>
                 </div>
-                <div class="milestone right">
-                    <div class="milestone-content">
-                        <div class="milestone-year">2024</div>
-                        <h3>Industry Innovation Award</h3>
-                        <p>Recognized for our contributions to industry advancements and excellence.</p>
+                <div class="abtus-milestone abtus-right">
+                    <div class="abtus-milestone-content">
+                        <div class="abtus-milestone-year">2024</div>
+                        <h3 class="abtus-milestone-title">Industry Innovation Award</h3>
+                        <p class="abtus-milestone-text">Recognized for our contributions to industry advancements and excellence.</p>
                     </div>
                 </div>
-                <div class="milestone left">
-                    <div class="milestone-content">
-                        <div class="milestone-year">2025</div>
-                        <h3>Major Partnership</h3>
-                        <p>Formed strategic alliance with industry leaders to expand our service offerings.</p>
+                <div class="abtus-milestone abtus-left">
+                    <div class="abtus-milestone-content">
+                        <div class="abtus-milestone-year">2025</div>
+                        <h3 class="abtus-milestone-title">Major Partnership</h3>
+                        <p class="abtus-milestone-text">Formed strategic alliance with industry leaders to expand our service offerings.</p>
                     </div>
                 </div>
             </div>
@@ -131,26 +131,30 @@ include 'includes/header.php';
 
 <style>
     /*about us*/
-    body {
-        background-color: #f5f5f5;
-        color: #333;
-        line-height: 1.6;
-    }
-
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-    }
-
-    header {
+    .abtus-header {
         background-color: #2c3e50;
         color: white;
         padding: 20px 0;
         text-align: center;
     }
 
-    .about-content {
+    .abtus-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .abtus-main-title {
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    .abtus-header-text {
+        font-size: 1.1rem;
+        opacity: 0.9;
+    }
+
+    .abtus-content {
         background: white;
         padding: 40px;
         border-radius: 8px;
@@ -158,37 +162,31 @@ include 'includes/header.php';
         margin-top: 40px;
     }
 
-    h1,
-    h2,
-    h3 {
+    .abtus-section-title {
         color: #2c3e50;
         margin-bottom: 20px;
     }
 
-    p {
-        margin-bottom: 15px;
-    }
-
-    .company-intro {
+    .abtus-company-intro {
         text-align: center;
         margin-bottom: 40px;
     }
 
-    .company-intro p {
+    .abtus-intro-text {
         font-size: 18px;
         max-width: 800px;
         margin: 0 auto 20px;
     }
 
-    .mission-vision {
+    .abtus-mission-vision {
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
         margin-bottom: 40px;
     }
 
-    .mission,
-    .vision {
+    .abtus-mission,
+    .abtus-vision {
         flex: 1;
         min-width: 300px;
         background-color: rgb(255, 255, 255);
@@ -197,59 +195,53 @@ include 'includes/header.php';
         border-left: 4px solid #87e1f7;
     }
 
-    .team-section {
+    .abtus-team-section {
         margin-bottom: 40px;
     }
 
-    .team-members {
+    .abtus-team-members {
         display: flex;
         flex-wrap: wrap;
         gap: 25px;
         margin-top: 30px;
     }
 
-    .team-member {
+    .abtus-team-member {
         flex: 1;
         min-width: 250px;
         text-align: center;
     }
 
-    .team-photo img {
+    .abtus-team-photo img {
         width: 200px;
-        /* Adjust the size as needed */
         height: 200px;
         border-radius: 50%;
-        /* Makes it perfectly round */
         object-fit: cover;
-        /* Ensures image stays centered and fills the circle */
         border: 2px solid #ccc;
-        /* Optional: adds a soft border */
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        /* Optional: subtle shadow */
     }
 
-
-    .team-member h3 {
+    .abtus-member-name {
         margin-bottom: 10px;
     }
 
-    .team-member p.position {
+    .abtus-member-position {
         color: #3498db;
         font-weight: bold;
         margin-bottom: 10px;
     }
 
-    .milestones {
+    .abtus-milestones {
         margin-bottom: 40px;
     }
 
-    .timeline {
+    .abtus-timeline {
         position: relative;
         max-width: 1000px;
         margin: 30px auto 0;
     }
 
-    .timeline::after {
+    .abtus-timeline::after {
         content: '';
         position: absolute;
         width: 6px;
@@ -260,13 +252,13 @@ include 'includes/header.php';
         margin-left: -3px;
     }
 
-    .milestone {
+    .abtus-milestone {
         padding: 10px 40px;
         position: relative;
         width: 50%;
     }
 
-    .milestone::after {
+    .abtus-milestone::after {
         content: '';
         position: absolute;
         width: 20px;
@@ -279,19 +271,19 @@ include 'includes/header.php';
         z-index: 1;
     }
 
-    .left {
+    .abtus-left {
         left: 0;
     }
 
-    .right {
+    .abtus-right {
         left: 50%;
     }
 
-    .right::after {
+    .abtus-right::after {
         left: -10px;
     }
 
-    .milestone-content {
+    .abtus-milestone-content {
         padding: 20px;
         background-color: white;
         position: relative;
@@ -299,24 +291,24 @@ include 'includes/header.php';
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    .milestone-year {
+    .abtus-milestone-year {
         font-weight: bold;
         color: #3498db;
         margin-bottom: 5px;
     }
 
-    .values-section {
+    .abtus-values-section {
         margin-bottom: 40px;
     }
 
-    .values-grid {
+    .abtus-values-grid {
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
         margin-top: 30px;
     }
 
-    .value-item {
+    .abtus-value-item {
         flex: 1;
         min-width: 250px;
         padding: 20px;
@@ -325,10 +317,43 @@ include 'includes/header.php';
         text-align: center;
     }
 
-    .value-icon {
+    .abtus-value-icon {
         font-size: 36px;
         color: #3498db;
         margin-bottom: 15px;
+    }
+
+    @media (max-width: 768px) {
+
+        .abtus-mission-vision,
+        .abtus-team-members,
+        .abtus-values-grid {
+            flex-direction: column;
+        }
+
+        .abtus-milestone {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
+        }
+
+        .abtus-milestone::after {
+            left: 15px;
+        }
+
+        .abtus-left::after,
+        .abtus-right::after {
+            left: 15px;
+        }
+
+        .abtus-left,
+        .abtus-right {
+            left: 0;
+        }
+
+        .abtus-timeline::after {
+            left: 31px;
+        }
     }
 </style>
 

@@ -18,6 +18,12 @@ if (!isset($_SESSION['cart']) || empty($_SESSION['cart'])) {
     exit;
 }
 
+// Redirect to login if not logged in
+if (!isLoggedIn()) {
+    header('Location: login.php?redirect=checkout.php');
+    exit;
+}
+
 // Initialize variables
 $errors = [];
 $successMessage = '';
@@ -64,7 +70,7 @@ $items = [];
 foreach ($_SESSION['cart'] as $item) {
     $subtotal += $item['price'] * $item['quantity'];
     $items[] = [
-        'id' => $item['id'],
+        'id' => $item['product_id'],
         'name' => $item['name'],
         'price' => $item['price'],
         'quantity' => $item['quantity'],
@@ -72,6 +78,8 @@ foreach ($_SESSION['cart'] as $item) {
         'image' => $item['image'] ?? ''
     ];
 }
+
+
 
 // Calculate shipping
 $shipping = $subtotal > 50 ? 0 : 7.99;
@@ -256,43 +264,43 @@ include 'includes/header.php';
                         <?php endif; ?>
 
                         <div class="form-row">
-                            <div class="form-group">
+                            <div class="ckout-form-group">
                                 <label for="first_name">First Name *</label>
                                 <input type="text" id="first_name" name="first_name" required
                                     value="<?php echo isset($userData['first_name']) ? htmlspecialchars($userData['first_name']) : (isset($_POST['first_name']) ? htmlspecialchars($_POST['first_name']) : ''); ?>">
                             </div>
-                            <div class="form-group">
+                            <div class="ckout-form-group">
                                 <label for="last_name">Last Name *</label>
                                 <input type="text" id="last_name" name="last_name" required
                                     value="<?php echo isset($userData['last_name']) ? htmlspecialchars($userData['last_name']) : (isset($_POST['last_name']) ? htmlspecialchars($_POST['last_name']) : ''); ?>">
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="ckout-form-group">
                             <label for="email">Email Address *</label>
                             <input type="email" id="email" name="email" required
                                 value="<?php echo isset($userData['email']) ? htmlspecialchars($userData['email']) : (isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''); ?>">
                         </div>
 
-                        <div class="form-group">
+                        <div class="ckout-form-group">
                             <label for="phone">Phone Number</label>
                             <input type="tel" id="phone" name="phone"
                                 value="<?php echo isset($userData['phone']) ? htmlspecialchars($userData['phone']) : (isset($_POST['phone']) ? htmlspecialchars($_POST['phone']) : ''); ?>">
                         </div>
 
-                        <div class="form-group">
+                        <div class="ckout-form-group">
                             <label for="address">Street Address *</label>
                             <input type="text" id="address" name="address" required
                                 value="<?php echo isset($_POST['address']) ? htmlspecialchars($_POST['address']) : ''; ?>">
                         </div>
 
                         <div class="form-row">
-                            <div class="form-group">
+                            <div class="ckout-form-group">
                                 <label for="city">City *</label>
                                 <input type="text" id="city" name="city" required
                                     value="<?php echo isset($_POST['city']) ? htmlspecialchars($_POST['city']) : ''; ?>">
                             </div>
-                            <div class="form-group">
+                            <div class="ckout-form-group">
                                 <label for="state">State/Province</label>
                                 <input type="text" id="state" name="state"
                                     value="<?php echo isset($_POST['state']) ? htmlspecialchars($_POST['state']) : ''; ?>">
@@ -300,12 +308,12 @@ include 'includes/header.php';
                         </div>
 
                         <div class="form-row">
-                            <div class="form-group">
+                            <div class="ckout-form-group">
                                 <label for="zip_code">ZIP/Postal Code *</label>
                                 <input type="text" id="zip_code" name="zip_code" required
                                     value="<?php echo isset($_POST['zip_code']) ? htmlspecialchars($_POST['zip_code']) : ''; ?>">
                             </div>
-                            <div class="form-group">
+                            <div class="ckout-form-group">
                                 <label for="country">Country *</label>
                                 <select id="country" name="country" required>
                                     <option value="">Select Country</option>
@@ -319,13 +327,13 @@ include 'includes/header.php';
                         </div>
 
                         <?php if ($isLoggedIn): ?>
-                            <div class="form-group checkbox-group">
+                            <div class="ckout-form-group checkbox-group">
                                 <input type="checkbox" id="save_address" name="save_address" value="1">
                                 <label for="save_address">Save this address to my account</label>
                             </div>
                         <?php endif; ?>
 
-                        <div class="form-group">
+                        <div class="ckout-form-group">
                             <label for="order_notes">Order Notes (optional)</label>
                             <textarea id="order_notes" name="order_notes" rows="4"><?php echo isset($_POST['order_notes']) ? htmlspecialchars($_POST['order_notes']) : ''; ?></textarea>
                         </div>
@@ -347,20 +355,20 @@ include 'includes/header.php';
                                             Size: <?php echo htmlspecialchars($item['size']); ?> × <?php echo $item['quantity']; ?>
                                         </span>
                                     </div>
-                                    <span class="item-price">$<?php echo number_format($item['price'] * $item['quantity'], 2); ?></span>
+                                    <span class="item-price">LKR <?php echo number_format($item['price'] * $item['quantity'], 2); ?></span>
                                 </div>
                             <?php endforeach; ?>
 
                             <div class="summary-row">
                                 <span>Subtotal</span>
-                                <span>$<?php echo number_format($subtotal, 2); ?></span>
+                                <span>LKR <?php echo number_format($subtotal, 2); ?></span>
                             </div>
 
                             <div class="summary-row">
                                 <span>Shipping</span>
                                 <span>
                                     <?php if ($shipping > 0): ?>
-                                        $<?php echo number_format($shipping, 2); ?>
+                                        LKR <?php echo number_format($shipping, 2); ?>
                                     <?php else: ?>
                                         Free Shipping
                                     <?php endif; ?>
@@ -369,7 +377,7 @@ include 'includes/header.php';
 
                             <div class="summary-row total-row">
                                 <span>Total</span>
-                                <span>$<?php echo number_format($total, 2); ?></span>
+                                <span>LKR <?php echo number_format($total, 2); ?></span>
                             </div>
                         </div>
 
@@ -401,16 +409,16 @@ include 'includes/header.php';
                                     <i class="fab fa-cc-amex"></i>
                                 </div>
                                 <div class="card-fields" id="card-fields">
-                                    <div class="form-group">
+                                    <div class="ckout-form-group">
                                         <label for="card_number">Card Number</label>
                                         <input type="text" id="card_number" name="card_number" placeholder="1234 5678 9012 3456">
                                     </div>
                                     <div class="form-row">
-                                        <div class="form-group">
+                                        <div class="ckout-form-group">
                                             <label for="expiry_date">Expiry Date</label>
                                             <input type="text" id="expiry_date" name="expiry_date" placeholder="MM/YY">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="ckout-form-group">
                                             <label for="cvv">CVV</label>
                                             <input type="text" id="cvv" name="cvv" placeholder="123">
                                         </div>
@@ -529,23 +537,23 @@ include 'includes/header.php';
         margin-bottom: 15px;
     }
 
-    .form-row .form-group {
+    .form-row .ckout-form-group {
         flex: 1;
     }
 
-    .form-group {
+    .ckout-form-group {
         margin-bottom: 20px;
     }
 
-    .form-group label {
+    .ckout-form-group label {
         display: block;
         margin-bottom: 8px;
         font-weight: 500;
     }
 
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
+    .ckout-form-group input,
+    .ckout-form-group select,
+    .ckout-form-group textarea {
         width: 100%;
         padding: 12px 15px;
         border: 1px solid #ddd;
@@ -553,9 +561,9 @@ include 'includes/header.php';
         font-size: 15px;
     }
 
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
+    .ckout-form-group input:focus,
+    .ckout-form-group select:focus,
+    .ckout-form-group textarea:focus {
         border-color: #1D503A;
         outline: none;
     }

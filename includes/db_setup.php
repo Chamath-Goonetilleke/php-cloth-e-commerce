@@ -141,6 +141,40 @@ if ($conn->query($sql) === FALSE) {
     die("Error creating order_items table: " . $conn->error);
 }
 
+// Create wishlists table
+$sql = "CREATE TABLE IF NOT EXISTS wishlists (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    product_id INT NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE KEY unique_wishlist (user_id, product_id),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;";
+
+if ($conn->query($sql) === FALSE) {
+    die("Error creating wishlists table: " . $conn->error);
+}
+
+// Create reviews table
+$sql = "CREATE TABLE IF NOT EXISTS reviews (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_id INT NOT NULL,
+    user_id INT NOT NULL,
+    order_id INT NOT NULL,
+    rating INT NOT NULL CHECK (rating BETWEEN 1 AND 5),
+    feedback TEXT,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE KEY unique_review (product_id, user_id, order_id),
+    FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;";
+
+if ($conn->query($sql) === FALSE) {
+    die("Error creating reviews table: " . $conn->error);
+}
+
 // Create admin user if it doesn't exist
 $admin_username = "admin";
 $admin_email = "admin@onefitclothing.com";
