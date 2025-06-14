@@ -50,7 +50,7 @@ include 'includes/header.php';
                 ?>
                 <div class="product-card">
                     <img src="<?php echo $product['image_path']; ?>" alt="<?php echo $product['name']; ?>">
-                    <h3><?php echo $product['name']; ?></h3><br><br>
+                    <h3 class="product-name"><?php echo $product['name']; ?></h3>
                     <div class="stars">
                         <?php
                         $fullStars = floor($avgRating);
@@ -186,5 +186,17 @@ include 'includes/footer.php';
     .product-card .btn:hover {
         background-color: lightgray;
         transform: translateY(-2px);
+    }
+
+    .product-name {
+        font-size: 15px;
+        margin: 10px 0;
+        word-break: break-word;
+        white-space: normal;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
     }
 </style>

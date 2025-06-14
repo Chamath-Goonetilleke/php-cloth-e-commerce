@@ -123,3 +123,11 @@ Stack trace:
 
 )
 
+[03-Jun-2025 14:44:43 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Applications/MAMP/htdocs/onefitclothing/admin/product-edit.php on line 140
+[03-Jun-2025 14:44:51 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /Applications/MAMP/htdocs/onefitclothing/includes/config.php on line 27) in /Applications/MAMP/htdocs/onefitclothing/admin/product-edit.php on line 29
+[03-Jun-2025 14:45:29 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Applications/MAMP/htdocs/onefitclothing/admin/product-edit.php on line 140
+[03-Jun-2025 14:45:33 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /Applications/MAMP/htdocs/onefitclothing/includes/config.php on line 27) in /Applications/MAMP/htdocs/onefitclothing/admin/product-edit.php on line 29
+[03-Jun-2025 14:52:22 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /Applications/MAMP/htdocs/onefitclothing/includes/config.php on line 27) in /Applications/MAMP/htdocs/onefitclothing/admin/product-edit.php on line 29
+[03-Jun-2025 14:52:31 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /Applications/MAMP/htdocs/onefitclothing/includes/config.php on line 27) in /Applications/MAMP/htdocs/onefitclothing/admin/product-edit.php on line 29
+[03-Jun-2025 14:55:01 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Applications/MAMP/htdocs/onefitclothing/admin/product-edit.php on line 140
+[03-Jun-2025 14:55:25 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /Applications/MAMP/htdocs/onefitclothing/includes/config.php on line 27) in /Applications/MAMP/htdocs/onefitclothing/admin/product-edit.php on line 29
